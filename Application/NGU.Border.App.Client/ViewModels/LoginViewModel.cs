@@ -336,12 +336,12 @@ namespace NGU.App.Client.ViewModels
 
             if (LoggedUser != null)
             {
-                //load menuImages
-                foreach (var m in LoggedUser.Menus)
-                {
-                    string key = m.ViewModelTypeID.ToString().ToEnum<ViewModelTypes>().GetResourceKey();
-                    m.MenuImage = GetMenuImage(key) != null ? GetMenuImage(key) : GetMenuImage("EmptyMenuImage");
-                }
+                ////load menuImages
+                //foreach (var m in LoggedUser.Menus)
+                //{
+                //    string key = m.ViewModelTypeID.ToString().ToEnum<ViewModelTypes>().GetResourceKey();
+                //    m.MenuImage = GetMenuImage(key) != null ? GetMenuImage(key) : GetMenuImage("EmptyMenuImage");
+                //}
 
                 ViewModelTypes type = ViewModelTypes.MainMenu;
                 BaseViewModel.WindowModel.CurrentViewModel = AppUtilities.GetViewModel((int)type, null);

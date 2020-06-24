@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="UserValidation" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>NGU.Interfaces.ApiAdmin.UserValidation, NGU.Interfaces, Version=1.2.0.15171, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeInfo>NGU.Interfaces.ApiAdmin.UserValidation, Service References.ApiAdmin.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>

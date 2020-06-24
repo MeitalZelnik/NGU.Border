@@ -6,6 +6,7 @@
       <xs:enumeration value="Admin" />
       <xs:enumeration value="BlackList" />
       <xs:enumeration value="Identification" />
+      <xs:enumeration value="Border" />
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="ModuleTypes" nillable="true" type="tns:ModuleTypes" />

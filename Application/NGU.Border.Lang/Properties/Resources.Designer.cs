@@ -1618,7 +1618,7 @@ namespace NGU.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to IDENTITY SYSTEM.
+        ///   Looks up a localized string similar to BORDER CONTROL SYSTEM.
         /// </summary>
         public static string MainWindowTitle {
             get {

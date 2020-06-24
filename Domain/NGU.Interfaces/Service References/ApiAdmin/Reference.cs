@@ -28,6 +28,9 @@ namespace NGU.Interfaces.ApiAdmin {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         Identification = 3,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Border = 4,
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]

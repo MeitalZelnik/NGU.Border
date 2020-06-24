@@ -37,7 +37,7 @@ namespace NGU.Services
         {
             try
             {
-                UserValidation apiDto = APIAdmin.CheckUserValidityWithPassword(username, password, moduleLanguage, ModuleTypes.Identification);
+                UserValidation apiDto = APIAdmin.CheckUserValidityWithPassword(username, password, moduleLanguage, ModuleTypes.Border);
 
                 return apiDto;
             }
