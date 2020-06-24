@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5328CAEF-D2F3-43C7-95EF-2F88E8AB5479}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NGU.Core</RootNamespace>
+    <AssemblyName>NGU.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.Extensions.1.0.0.11\lib\net452\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.Hibernate.1.0.1.69\lib\net452\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\BaseStructures.1.0.1.37\lib\net452\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Pangea.BaseStructures, Version=1.0.1.53, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\BaseStructures.1.0.1.53\lib\net452\Pangea.BaseStructures.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.BasicValidators, Version=1.0.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.BasicValidators.1.0.0.9\lib\net452\Pangea.BasicValidators.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Pangea.BasicValidators.Lang, Version=1.0.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.BasicValidators.1.0.0.9\lib\net452\Pangea.BasicValidators.Lang.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Pangea.Config.Module, Version=1.0.0.29, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.Fingerprints.2.0.12.29\lib\net452\Pangea.Config.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.Extensions, Version=1.0.0.21, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.Extensions.1.0.0.21\lib\net452\Pangea.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Pangea.Fingerprints.Interfaces, Version=2.0.12.29, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.Fingerprints.2.0.12.29\lib\net452\Pangea.Fingerprints.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.Fingerprints.Lang, Version=1.0.0.29, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.Fingerprints.2.0.12.29\lib\net452\Pangea.Fingerprints.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.Fingerprints10.UI, Version=2.0.12.29, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\..\packages\Pangea.Fingerprints.2.0.12.29\lib\net452\Pangea.Fingerprints10.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.Fingerprints10X64, Version=2.0.12.29, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\..\packages\Pangea.Fingerprints.2.0.12.29\lib\net452\Pangea.Fingerprints10X64.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.Hibernate, Version=1.0.1.69, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.Hibernate.1.0.1.69\lib\net452\Pangea.Hibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.Log, Version=1.1.2.14, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\BaseStructures.1.0.1.37\lib\net452\Pangea.Log.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Pangea.Logger.Service.Interface, Version=1.0.0.14, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\BaseStructures.1.0.1.37\lib\net452\Pangea.Logger.Service.Interface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Pangea.MultiLanguage, Version=1.0.0.37, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.MultiLanguage.1.0.0.37\lib\net452\Pangea.MultiLanguage.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.Neurotec10x64, Version=2.0.12.29, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\..\packages\Pangea.Fingerprints.2.0.12.29\lib\net452\Pangea.Neurotec10x64.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.UsbDevices, Version=1.0.0.29, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.Fingerprints.2.0.12.29\lib\net452\Pangea.UsbDevices.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.Utils, Version=1.0.0.23, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.Utils.1.0.0.23\lib\net452\Pangea.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.Utils.1.0.0.23\lib\net452\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.Utils.1.0.0.23\lib\net452\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Spire.License, Version=1.3.8.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.Extensions.1.0.0.21\lib\net452\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=6.2.4.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.Extensions.1.0.0.21\lib\net452\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Classes\Person.cs" />
+    <Compile Include="DTO\DTOBase.cs" />
+    <Compile Include="DTO\RequestStatusDTO.cs" />
+    <Compile Include="GeneratedClasses\BiometricParameter.cs" />
+    <Compile Include="GeneratedClasses\ImageBiometric.cs" />
+    <Compile Include="GeneratedClasses\ImageType.cs" />
+    <Compile Include="GeneratedClasses\LocalizedNames.cs" />
+    <Compile Include="GeneratedClasses\MatchData.cs" />
+    <Compile Include="GeneratedClasses\Person.cs" />
+    <Compile Include="GeneratedClasses\PersonDoc.cs" />
+    <Compile Include="GeneratedClasses\Request.cs" />
+    <Compile Include="GeneratedClasses\RequestReason.cs" />
+    <Compile Include="GeneratedClasses\RequestStatus.cs" />
+    <Compile Include="GeneratedClasses\RequestSubType.cs" />
+    <Compile Include="GeneratedClasses\RequestType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\NGU.Border.Lang\NGU.Border.Lang.csproj">
+      <Project>{df31e3e3-a3b9-4085-a613-18e43c3da8f8}</Project>
+      <Name>NGU.Border.Lang</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NGU.Enums\NGU.Enums.csproj">
+      <Project>{3c1a9851-4f80-4b03-8ce0-b45de3a799eb}</Project>
+      <Name>NGU.Enums</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Config\fingerprint.config" />
+    <None Include="hbm2net\Hbm2Net.vm" />
+    <None Include="lib\FingersDetectSegmentsClassifier.ndf" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Generated.hbm.mapping\RequestSubType.hbm.xml" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\icudt53.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\icuin53.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\icuuc53.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\LScanEssentials.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\NdmCrossMatchLScan.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\platforms\qwindows.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Core.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Gui.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Multimedia.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5MultimediaWidgets.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Network.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5OpenGL.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Positioning.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5PrintSupport.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Qml.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Quick.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Sensors.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Sql.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5WebChannel.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5WebKit.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5WebKitWidgets.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Widgets.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Xml.dll" />
+    <Content Include="lib\FScanners\NdmGreenBit\DID20.dll" />
+    <Content Include="lib\FScanners\NdmGreenBit\DID20IP.dll" />
+    <Content Include="lib\FScanners\NdmGreenBit\DS40U.dll" />
+    <Content Include="lib\FScanners\NdmGreenBit\DS84C.dll" />
+    <Content Include="lib\FScanners\NdmGreenBit\GBMSAPI.dll" />
+    <Content Include="lib\FScanners\NdmGreenBit\MC517.dll" />
+    <Content Include="lib\FScanners\NdmGreenBit\MS527.dll" />
+    <Content Include="lib\FScanners\NdmGreenBit\NdmGreenBit.dll" />
+    <Content Include="lib\FScanners\NdmGreenBit\VsRoll.dll" />
+    <Content Include="lib\FScanners\NdmIntegratedBiometricsIBScanUltimate\IBScanUltimate.dll" />
+    <Content Include="lib\FScanners\NdmIntegratedBiometricsIBScanUltimate\NdmIntegratedBiometricsIBScanUltimate.dll" />
+    <Content Include="lib\libopenblas.dll" />
+    <Content Include="lib\LiveMedia.dll" />
+    <Content Include="lib\msvcp100.dll" />
+    <Content Include="lib\msvcp110.dll" />
+    <Content Include="lib\msvcp120.dll" />
+    <Content Include="lib\msvcp140.dll" />
+    <Content Include="lib\msvcp80.dll" />
+    <Content Include="lib\msvcp90.dll" />
+    <Content Include="lib\msvcr100.dll" />
+    <Content Include="lib\msvcr110.dll" />
+    <Content Include="lib\msvcr120.dll" />
+    <Content Include="lib\msvcr80.dll" />
+    <Content Include="lib\msvcr90.dll" />
+    <Content Include="lib\NBiometricClient.dll" />
+    <Content Include="lib\NBiometrics.dll" />
+    <Content Include="lib\NCluster.dll" />
+    <Content Include="lib\NClusterJni.dll" />
+    <Content Include="lib\NCore.dll" />
+    <Content Include="lib\NDevices.dll" />
+    <Content Include="lib\NdmMedia.dll" />
+    <Content Include="lib\NdmVirtual.dll" />
+    <Content Include="lib\Neurotec.Biometrics.Client.dll" />
+    <Content Include="lib\Neurotec.Biometrics.dll" />
+    <Content Include="lib\Neurotec.Biometrics.Gui.dll" />
+    <Content Include="lib\Neurotec.Cluster.dll" />
+    <Content Include="lib\Neurotec.Devices.dll" />
+    <Content Include="lib\Neurotec.Devices.Virtual.dll" />
+    <Content Include="lib\Neurotec.dll" />
+    <Content Include="lib\Neurotec.Gui.dll" />
+    <Content Include="lib\Neurotec.Licensing.dll" />
+    <Content Include="lib\Neurotec.Media.dll" />
+    <Content Include="lib\Neurotec.Media.Processing.dll" />
+    <Content Include="lib\NLicensing.dll" />
+    <Content Include="lib\NMedia.dll" />
+    <Content Include="lib\NMediaProc.dll" />
+    <Content Include="lib\Pangea.Devices.UI.Resources.dll" />
+    <EmbeddedResource Include="Generated.hbm.mapping\RequestType.hbm.xml" />
+    <EmbeddedResource Include="Generated.hbm.mapping\RequestStatus.hbm.xml" />
+    <EmbeddedResource Include="Generated.hbm.mapping\ImageBiometric.hbm.xml" />
+    <EmbeddedResource Include="Generated.hbm.mapping\Request.hbm.xml" />
+    <EmbeddedResource Include="Generated.hbm.mapping\BiometricParameter.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generated.hbm.mapping\ImageType.hbm.xml" />
+    <EmbeddedResource Include="Generated.hbm.mapping\MatchData.hbm.xml" />
+    <EmbeddedResource Include="Generated.hbm.mapping\PersonDoc.hbm.xml" />
+    <EmbeddedResource Include="Generated.hbm.mapping\Person.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generated.hbm.mapping\RequestReason.hbm.xml" />
+    <EmbeddedResource Include="Generated.hbm.mapping\Languages.hbm.xml" />
+    <Content Include="hbm2net\NHibernate.Tool.hbm2net\Iesi.Collections.dll" />
+    <Content Include="hbm2net\NHibernate.Tool.hbm2net\log4net.dll" />
+    <Content Include="hbm2net\NHibernate.Tool.hbm2net\NHibernate.dll" />
+    <Content Include="hbm2net\NHibernate.Tool.hbm2net\NHibernate.Tool.hbm2net.Console.exe" />
+    <Content Include="hbm2net\NHibernate.Tool.hbm2net\NHibernate.Tool.hbm2net.dll" />
+    <Content Include="hbm2net\NHibernate.Tool.hbm2net\NVelocity.dll" />
+    <Content Include="hbm2net\nvelocity.config.xml" />
+    <Content Include="hbm2net\README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserTypes\" />
+    <Folder Include="Validators\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>$(ProjectDir)hbm2net\NHibernate.Tool.hbm2net\NHibernate.Tool.hbm2net.Console.exe --config="$(ProjectDir)hbm2net\nvelocity.config.xml" --output="$(ProjectDir)GeneratedClasses" "$(ProjectDir)Generated.hbm.mapping\*.hbm.xml"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

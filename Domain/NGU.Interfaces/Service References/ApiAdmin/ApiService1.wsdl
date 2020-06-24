@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ApiService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.1.33/NGU.Admin/ApiService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.1.33/NGU.Admin/ApiService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.1.33/NGU.Admin/ApiService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Pangea.MultiLanguage" />
+      <xsd:import schemaLocation="http://192.168.1.33/NGU.Admin/ApiService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/NGU.Admin.Enums" />
+      <xsd:import schemaLocation="http://192.168.1.33/NGU.Admin/ApiService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/NGU.Admin.Core" />
+      <xsd:import schemaLocation="http://192.168.1.33/NGU.Admin/ApiService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IApiService_IsAlive_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsAlive" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_IsAlive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsAliveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_CheckUserValidityWithPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUserValidityWithPassword" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_CheckUserValidityWithPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUserValidityWithPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_UpdateUserPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_UpdateUserPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_GetUserListWithNamesOnly_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserListWithNamesOnly" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_GetUserListWithNamesOnly_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserListWithNamesOnlyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_GetUserMenus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserMenus" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_GetUserMenus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserMenusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_GetSystemParameters_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemParameters" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_GetSystemParameters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_GetGenders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenders" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_GetGenders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGendersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_GetCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountries" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_GetCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_GetIdenTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdenTypes" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_GetIdenTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdenTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_InsertLogoutUserLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLogoutUserLog" />
+  </wsdl:message>
+  <wsdl:message name="IApiService_InsertLogoutUserLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLogoutUserLogResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IApiService">
+    <wsdl:operation name="IsAlive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApiService/IsAlive" message="tns:IApiService_IsAlive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApiService/IsAliveResponse" message="tns:IApiService_IsAlive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserValidityWithPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApiService/CheckUserValidityWithPassword" message="tns:IApiService_CheckUserValidityWithPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApiService/CheckUserValidityWithPasswordResponse" message="tns:IApiService_CheckUserValidityWithPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApiService/UpdateUserPassword" message="tns:IApiService_UpdateUserPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApiService/UpdateUserPasswordResponse" message="tns:IApiService_UpdateUserPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserListWithNamesOnly">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApiService/GetUserListWithNamesOnly" message="tns:IApiService_GetUserListWithNamesOnly_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApiService/GetUserListWithNamesOnlyResponse" message="tns:IApiService_GetUserListWithNamesOnly_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserMenus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApiService/GetUserMenus" message="tns:IApiService_GetUserMenus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApiService/GetUserMenusResponse" message="tns:IApiService_GetUserMenus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemParameters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApiService/GetSystemParameters" message="tns:IApiService_GetSystemParameters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApiService/GetSystemParametersResponse" message="tns:IApiService_GetSystemParameters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApiService/GetGenders" message="tns:IApiService_GetGenders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApiService/GetGendersResponse" message="tns:IApiService_GetGenders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApiService/GetCountries" message="tns:IApiService_GetCountries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApiService/GetCountriesResponse" message="tns:IApiService_GetCountries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdenTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApiService/GetIdenTypes" message="tns:IApiService_GetIdenTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApiService/GetIdenTypesResponse" message="tns:IApiService_GetIdenTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertLogoutUserLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApiService/InsertLogoutUserLog" message="tns:IApiService_InsertLogoutUserLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApiService/InsertLogoutUserLogResponse" message="tns:IApiService_InsertLogoutUserLog_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IApiService" type="tns:IApiService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsAlive">
+      <soap:operation soapAction="http://tempuri.org/IApiService/IsAlive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserValidityWithPassword">
+      <soap:operation soapAction="http://tempuri.org/IApiService/CheckUserValidityWithPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserPassword">
+      <soap:operation soapAction="http://tempuri.org/IApiService/UpdateUserPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserListWithNamesOnly">
+      <soap:operation soapAction="http://tempuri.org/IApiService/GetUserListWithNamesOnly" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserMenus">
+      <soap:operation soapAction="http://tempuri.org/IApiService/GetUserMenus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemParameters">
+      <soap:operation soapAction="http://tempuri.org/IApiService/GetSystemParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenders">
+      <soap:operation soapAction="http://tempuri.org/IApiService/GetGenders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <soap:operation soapAction="http://tempuri.org/IApiService/GetCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdenTypes">
+      <soap:operation soapAction="http://tempuri.org/IApiService/GetIdenTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLogoutUserLog">
+      <soap:operation soapAction="http://tempuri.org/IApiService/InsertLogoutUserLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ApiService">
+    <wsdl:port name="BasicHttpBinding_IApiService" binding="tns:BasicHttpBinding_IApiService">
+      <soap:address location="http://192.168.1.33/NGU.Admin/ApiService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

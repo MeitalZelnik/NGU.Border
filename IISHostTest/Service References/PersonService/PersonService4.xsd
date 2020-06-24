@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ObjectValidationBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:NotifyPropertyChangedBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObjectValidationBase" nillable="true" type="tns:ObjectValidationBase" />
+  <xs:complexType name="NotifyPropertyChangedBase">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="NotifyPropertyChangedBase" nillable="true" type="tns:NotifyPropertyChangedBase" />
+  <xs:complexType name="MultiLanguage">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ObjectValidationBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DescriptionMLCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DescriptionTranslated" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MultiLanguage" nillable="true" type="tns:MultiLanguage" />
+</xs:schema>

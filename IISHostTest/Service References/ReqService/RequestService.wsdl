@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RequestService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:55750/RequestService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:55750/RequestService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:55750/RequestService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/NGU.Core" />
+      <xsd:import schemaLocation="http://localhost:55750/RequestService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" />
+      <xsd:import schemaLocation="http://localhost:55750/RequestService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/NGU.Enums" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRequestService_IsAlive_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsAlive" />
+  </wsdl:message>
+  <wsdl:message name="IRequestService_IsAlive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsAliveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRequestService_GenerateRequestNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateRequestNum" />
+  </wsdl:message>
+  <wsdl:message name="IRequestService_GenerateRequestNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateRequestNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRequestService_SaveRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRequest" />
+  </wsdl:message>
+  <wsdl:message name="IRequestService_SaveRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRequestService_GetRequestStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestStatus" />
+  </wsdl:message>
+  <wsdl:message name="IRequestService_GetRequestStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRequestService_SaveRequestStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRequestStatus" />
+  </wsdl:message>
+  <wsdl:message name="IRequestService_SaveRequestStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRequestStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRequestService_GetRequestByDoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestByDoc" />
+  </wsdl:message>
+  <wsdl:message name="IRequestService_GetRequestByDoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestByDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRequestService_GetRequestByNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestByNum" />
+  </wsdl:message>
+  <wsdl:message name="IRequestService_GetRequestByNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestByNumResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRequestService">
+    <wsdl:operation name="IsAlive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBaseService/IsAlive" message="tns:IRequestService_IsAlive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBaseService/IsAliveResponse" message="tns:IRequestService_IsAlive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateRequestNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRequestService/GenerateRequestNum" message="tns:IRequestService_GenerateRequestNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRequestService/GenerateRequestNumResponse" message="tns:IRequestService_GenerateRequestNum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRequestService/SaveRequest" message="tns:IRequestService_SaveRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRequestService/SaveRequestResponse" message="tns:IRequestService_SaveRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRequestService/GetRequestStatus" message="tns:IRequestService_GetRequestStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRequestService/GetRequestStatusResponse" message="tns:IRequestService_GetRequestStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRequestStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRequestService/SaveRequestStatus" message="tns:IRequestService_SaveRequestStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRequestService/SaveRequestStatusResponse" message="tns:IRequestService_SaveRequestStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestByDoc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRequestService/GetRequestByDoc" message="tns:IRequestService_GetRequestByDoc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRequestService/GetRequestByDocResponse" message="tns:IRequestService_GetRequestByDoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestByNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRequestService/GetRequestByNum" message="tns:IRequestService_GetRequestByNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRequestService/GetRequestByNumResponse" message="tns:IRequestService_GetRequestByNum_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IRequestService" type="tns:IRequestService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsAlive">
+      <soap:operation soapAction="http://tempuri.org/IBaseService/IsAlive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateRequestNum">
+      <soap:operation soapAction="http://tempuri.org/IRequestService/GenerateRequestNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRequest">
+      <soap:operation soapAction="http://tempuri.org/IRequestService/SaveRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestStatus">
+      <soap:operation soapAction="http://tempuri.org/IRequestService/GetRequestStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRequestStatus">
+      <soap:operation soapAction="http://tempuri.org/IRequestService/SaveRequestStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestByDoc">
+      <soap:operation soapAction="http://tempuri.org/IRequestService/GetRequestByDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestByNum">
+      <soap:operation soapAction="http://tempuri.org/IRequestService/GetRequestByNum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RequestService">
+    <wsdl:port name="BasicHttpBinding_IRequestService" binding="tns:BasicHttpBinding_IRequestService">
+      <soap:address location="http://localhost:55750/RequestService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="32e24ab9-8576-4ddf-b0ec-96c7fec15220" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:60584/AbisService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AbisService.xsd" MetadataType="Schema" ID="3a319102-3c64-4ac2-928f-54025ba109c2" SourceId="1" SourceUrl="http://localhost:60584/AbisService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AbisService.wsdl" MetadataType="Wsdl" ID="e3dd5f5a-1ca8-4f39-a4b0-34393d036696" SourceId="1" SourceUrl="http://localhost:60584/AbisService.svc?wsdl" />
+    <MetadataFile FileName="AbisService1.xsd" MetadataType="Schema" ID="f8d4214e-b1c4-4f35-8e6c-0b27669c8591" SourceId="1" SourceUrl="http://localhost:60584/AbisService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AbisService.disco" MetadataType="Disco" ID="29a52401-5db3-4602-be85-63d0f4f96ecf" SourceId="1" SourceUrl="http://localhost:60584/AbisService.svc?disco" />
+    <MetadataFile FileName="AbisService2.xsd" MetadataType="Schema" ID="f370d9df-99f3-4adb-9a7f-3445401b5097" SourceId="1" SourceUrl="http://localhost:60584/AbisService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

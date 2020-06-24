@@ -1,0 +1,1412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="ViewMore" xml:space="preserve">
+    <value>View more</value>
+  </data>
+  <data name="AddDocument" xml:space="preserve">
+    <value>Add Document</value>
+  </data>
+  <data name="EnterUsername" xml:space="preserve">
+    <value>Enter Username</value>
+  </data>
+  <data name="ActivityStatus" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="AddComment" xml:space="preserve">
+    <value>Add comment:</value>
+  </data>
+  <data name="AddNewUser" xml:space="preserve">
+    <value>Add User</value>
+  </data>
+  <data name="ANewerVersion" xml:space="preserve">
+    <value>Newer Version</value>
+  </data>
+  <data name="ApplicantDetails" xml:space="preserve">
+    <value>Applicant Details</value>
+  </data>
+  <data name="ApplicationDate" xml:space="preserve">
+    <value>Application Date</value>
+  </data>
+  <data name="ApplicationDetails" xml:space="preserve">
+    <value>Application Details</value>
+  </data>
+  <data name="ApplicationNo" xml:space="preserve">
+    <value>Application No.</value>
+  </data>
+  <data name="ApplicationsList" xml:space="preserve">
+    <value>Applications list</value>
+  </data>
+  <data name="ApplicationsListMsg" xml:space="preserve">
+    <value>Click an application to view its data. Navigate through the left menu bar.</value>
+  </data>
+  <data name="ApplicationType" xml:space="preserve">
+    <value>Application Type</value>
+  </data>
+  <data name="AppNo" xml:space="preserve">
+    <value>App. No.</value>
+  </data>
+  <data name="AppType" xml:space="preserve">
+    <value>App. Type</value>
+  </data>
+  <data name="attentionOf" xml:space="preserve">
+    <value>Attention of:</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>BACK</value>
+  </data>
+  <data name="BackSidePreview" xml:space="preserve">
+    <value>Back side preview</value>
+  </data>
+  <data name="BarcodeDetails" xml:space="preserve">
+    <value>Barcode Details</value>
+  </data>
+  <data name="Biometrics" xml:space="preserve">
+    <value>Biometrics</value>
+  </data>
+  <data name="Block" xml:space="preserve">
+    <value>Block</value>
+  </data>
+  <data name="Both" xml:space="preserve">
+    <value>Both</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Capture" xml:space="preserve">
+    <value>Capture</value>
+  </data>
+  <data name="CaptureCollectorSign" xml:space="preserve">
+    <value>Capture collector's signature</value>
+  </data>
+  <data name="CapturingMethod" xml:space="preserve">
+    <value>Capturing Method</value>
+  </data>
+  <data name="CardPreview" xml:space="preserve">
+    <value>Card Preview</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="CheckFingerprint" xml:space="preserve">
+    <value>Check fingerprint</value>
+  </data>
+  <data name="CheckPhoto" xml:space="preserve">
+    <value>Check Photo</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="ClearPicture" xml:space="preserve">
+    <value>Clear Picture</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="CollectedSuccessfully" xml:space="preserve">
+    <value>Collected Successfully</value>
+  </data>
+  <data name="CollectionDate" xml:space="preserve">
+    <value>Collection date</value>
+  </data>
+  <data name="CollectionResult" xml:space="preserve">
+    <value>Collection Result</value>
+  </data>
+  <data name="CollectorDetails" xml:space="preserve">
+    <value>Collector Details</value>
+  </data>
+  <data name="CollectorIsApplicant" xml:space="preserve">
+    <value>Collector is Applicant</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="CommentsHeader" xml:space="preserve">
+    <value>Click on unread comment to mark is as read</value>
+  </data>
+  <data name="CommentText" xml:space="preserve">
+    <value>Comment Text</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="CountryRepublic" xml:space="preserve">
+    <value>REPUBLIC OF ANGOLA</value>
+  </data>
+  <data name="CurrentLicneseDetails" xml:space="preserve">
+    <value>Current Licence Details</value>
+  </data>
+  <data name="CurrentPersonalDetails" xml:space="preserve">
+    <value>Current Personal Details</value>
+  </data>
+  <data name="CurrentStatus" xml:space="preserve">
+    <value>Current Status</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DateOfBirth" xml:space="preserve">
+    <value>Date of Birth</value>
+  </data>
+  <data name="DBDetails" xml:space="preserve">
+    <value>DB Details</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DenyApp" xml:space="preserve">
+    <value>Deny App</value>
+  </data>
+  <data name="DenyReason" xml:space="preserve">
+    <value>Deny reason</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Dob" xml:space="preserve">
+    <value>DOB</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>Downloading</value>
+  </data>
+  <data name="Duplex" xml:space="preserve">
+    <value>Duplex</value>
+  </data>
+  <data name="Edited" xml:space="preserve">
+    <value>Edited</value>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>Enter Password</value>
+  </data>
+  <data name="EnterSerialNoAndCollectorDetails" xml:space="preserve">
+    <value>Enter Serial number and collector details before printing temporary driving licence</value>
+  </data>
+  <data name="EnterSerialNumber" xml:space="preserve">
+    <value>Enter Serial Number</value>
+  </data>
+  <data name="ERR_IntrefRequired" xml:space="preserve">
+    <value>Intref Required</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ERR_Not_Valid_Age" xml:space="preserve">
+    <value>Birth date is not compatile with the licence type</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ERR_Required" xml:space="preserve">
+    <value>This field is required</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ERR_RoleAssignedToUser" xml:space="preserve">
+    <value>This role cannot be deleted because it is assigned to a menu</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ERR_SupDocToAppTypeAssignedToUser" xml:space="preserve">
+    <value>Already in use</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ExactNames" xml:space="preserve">
+    <value>Exact names</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>EXIT</value>
+  </data>
+  <data name="ExpiryDate" xml:space="preserve">
+    <value>Expiry Date</value>
+  </data>
+  <data name="Feeder" xml:space="preserve">
+    <value>Feeder</value>
+  </data>
+  <data name="FieldToCompare" xml:space="preserve">
+    <value>Field to Compare</value>
+  </data>
+  <data name="FingerprintRightThumb" xml:space="preserve">
+    <value>Fingerprint (right thumb)</value>
+  </data>
+  <data name="FirstIssueDate" xml:space="preserve">
+    <value>First issue date</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="FromPaperScanner" xml:space="preserve">
+    <value>From paper, Using paper scanner</value>
+  </data>
+  <data name="FromScreen" xml:space="preserve">
+    <value>From Screen</value>
+  </data>
+  <data name="FrontSidePreview" xml:space="preserve">
+    <value>Front side preview</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>Height(cms)</value>
+  </data>
+  <data name="HomeAffairs" xml:space="preserve">
+    <value>MINISTRY OF HOME AFFAIRS</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="IdDocType" xml:space="preserve">
+    <value>ID Document Type</value>
+  </data>
+  <data name="IdDocumentType" xml:space="preserve">
+    <value>ID Document Type</value>
+  </data>
+  <data name="IDNo" xml:space="preserve">
+    <value>ID No.</value>
+  </data>
+  <data name="IDNum" xml:space="preserve">
+    <value>ID Number</value>
+  </data>
+  <data name="IDNumber" xml:space="preserve">
+    <value>ID Number</value>
+  </data>
+  <data name="Intref" xml:space="preserve">
+    <value>INTREF</value>
+  </data>
+  <data name="IntrefClipboard" xml:space="preserve">
+    <value>Copy INTREF No. to clipboard</value>
+  </data>
+  <data name="IntrefNo" xml:space="preserve">
+    <value>INTREF No.</value>
+  </data>
+  <data name="IsEditable" xml:space="preserve">
+    <value>Editable</value>
+  </data>
+  <data name="IsMandatory" xml:space="preserve">
+    <value>Is Mandatory</value>
+  </data>
+  <data name="IssueDate" xml:space="preserve">
+    <value>Issue Date</value>
+  </data>
+  <data name="IssuedTempLicenseDetails" xml:space="preserve">
+    <value>Issued Temp. Licence Details</value>
+  </data>
+  <data name="IssuingCentre" xml:space="preserve">
+    <value>Issuing Centre</value>
+  </data>
+  <data name="LastUpdate" xml:space="preserve">
+    <value>Last Update</value>
+  </data>
+  <data name="LastUpdateDate" xml:space="preserve">
+    <value>Last Update Date</value>
+  </data>
+  <data name="LastUpdateUser" xml:space="preserve">
+    <value>Last Update User</value>
+  </data>
+  <data name="LicenceDetails" xml:space="preserve">
+    <value>Licence Details</value>
+  </data>
+  <data name="LicenceType" xml:space="preserve">
+    <value>Licence type</value>
+  </data>
+  <data name="LicenceTypes" xml:space="preserve">
+    <value>Licence types:</value>
+  </data>
+  <data name="LicenseCardSerialNo" xml:space="preserve">
+    <value>License card serial No.</value>
+  </data>
+  <data name="LicenseNo" xml:space="preserve">
+    <value>License No</value>
+  </data>
+  <data name="Licnese" xml:space="preserve">
+    <value>Licnece</value>
+  </data>
+  <data name="LiveImages" xml:space="preserve">
+    <value>Live Images</value>
+  </data>
+  <data name="Locations" xml:space="preserve">
+    <value>Locations</value>
+  </data>
+  <data name="Log" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="MainMenu" xml:space="preserve">
+    <value>MAIN MENU</value>
+  </data>
+  <data name="MainWindowTitle" xml:space="preserve">
+    <value>IDENTITY SYSTEM</value>
+  </data>
+  <data name="Mandatory" xml:space="preserve">
+    <value>Mandatory</value>
+  </data>
+  <data name="Match" xml:space="preserve">
+    <value>Match</value>
+  </data>
+  <data name="MessageHeader" xml:space="preserve">
+    <value>Main Admin System</value>
+  </data>
+  <data name="Module" xml:space="preserve">
+    <value>Module</value>
+  </data>
+  <data name="Nationality" xml:space="preserve">
+    <value>Nationality</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="NextAction" xml:space="preserve">
+    <value>Next Action</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>Next Page</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NoLicenseExistMsg" xml:space="preserve">
+    <value>No Temporary Licences exist</value>
+  </data>
+  <data name="NotPermitted" xml:space="preserve">
+    <value>Not Permitted</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="OldLicenceAttached" xml:space="preserve">
+    <value>Old Licence Attached</value>
+  </data>
+  <data name="Operation" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="OtherNames" xml:space="preserve">
+    <value>Other Name(s)</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Overwrite</value>
+  </data>
+  <data name="PassportNo" xml:space="preserve">
+    <value>Passport No</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Passowrd</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>Password Required</value>
+  </data>
+  <data name="Permitted" xml:space="preserve">
+    <value>Permitted</value>
+  </data>
+  <data name="PersonalDetails" xml:space="preserve">
+    <value>Personal Details</value>
+  </data>
+  <data name="PersonalRestriction" xml:space="preserve">
+    <value>Personal restriction</value>
+  </data>
+  <data name="PesonalDetails" xml:space="preserve">
+    <value>Pesonal Details</value>
+  </data>
+  <data name="Photo" xml:space="preserve">
+    <value>Photo</value>
+  </data>
+  <data name="PhotoSignature" xml:space="preserve">
+    <value>Photo/Signature</value>
+  </data>
+  <data name="PhysicalAddress" xml:space="preserve">
+    <value>Physical Address</value>
+  </data>
+  <data name="Platen" xml:space="preserve">
+    <value>Platen</value>
+  </data>
+  <data name="PostalAddress" xml:space="preserve">
+    <value>Postal Address (if different)</value>
+  </data>
+  <data name="PostingDate" xml:space="preserve">
+    <value>Posting date</value>
+  </data>
+  <data name="PrevPage" xml:space="preserve">
+    <value>Prev Page</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="PrintTempLicense" xml:space="preserve">
+    <value>Print Temp. License</value>
+  </data>
+  <data name="Provided" xml:space="preserve">
+    <value>Provided</value>
+  </data>
+  <data name="QAPassedSuccess" xml:space="preserve">
+    <value>QA Passed Successfully</value>
+  </data>
+  <data name="QAResult" xml:space="preserve">
+    <value>QA Result:</value>
+  </data>
+  <data name="Read" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="Recapture" xml:space="preserve">
+    <value>Recapture </value>
+  </data>
+  <data name="RegDate" xml:space="preserve">
+    <value>Reg. Date</value>
+  </data>
+  <data name="RegistrationDate" xml:space="preserve">
+    <value>Registration Date</value>
+  </data>
+  <data name="RelationshipWithApplicant" xml:space="preserve">
+    <value>Relationship with applicant</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Reprint" xml:space="preserve">
+    <value>Reprint</value>
+  </data>
+  <data name="RequestedSerrvise" xml:space="preserve">
+    <value>Requested Serrvise</value>
+  </data>
+  <data name="Retrieve" xml:space="preserve">
+    <value>Retrieve</value>
+  </data>
+  <data name="RevertToBiometr" xml:space="preserve">
+    <value>QA Passed Biometrics</value>
+  </data>
+  <data name="RevertToBiometrics" xml:space="preserve">
+    <value>Revert to Biometrics</value>
+  </data>
+  <data name="RevertToVerification" xml:space="preserve">
+    <value>Revert to Verification</value>
+  </data>
+  <data name="RevertToVeriic" xml:space="preserve">
+    <value>Revert to Verification</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="RoleName" xml:space="preserve">
+    <value>Role Name</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Scan" xml:space="preserve">
+    <value>Scan</value>
+  </data>
+  <data name="ScanApp" xml:space="preserve">
+    <value>Scan App</value>
+  </data>
+  <data name="ScanFrom" xml:space="preserve">
+    <value>Scan From</value>
+  </data>
+  <data name="ScanningMethod" xml:space="preserve">
+    <value>Scanning Method</value>
+  </data>
+  <data name="ScanningOptions" xml:space="preserve">
+    <value>Scanning Options</value>
+  </data>
+  <data name="ScanSupDoc" xml:space="preserve">
+    <value>Scan Supporting Documents </value>
+  </data>
+  <data name="ScanUsingFeeder" xml:space="preserve">
+    <value>Scan Using Feeder</value>
+  </data>
+  <data name="SelectDevice" xml:space="preserve">
+    <value>Select Device</value>
+  </data>
+  <data name="SerialNo" xml:space="preserve">
+    <value>Serial No</value>
+  </data>
+  <data name="Sex" xml:space="preserve">
+    <value>Sex</value>
+  </data>
+  <data name="ShortDateFormat" xml:space="preserve">
+    <value>{0:dd/MM/yyyy}</value>
+    <comment>Format</comment>
+  </data>
+  <data name="ShortDateFormatWithTime" xml:space="preserve">
+    <value>{0:dd/MM/yyyy HH:mm:ss}</value>
+    <comment>Format</comment>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>Signature</value>
+  </data>
+  <data name="SignatureTake" xml:space="preserve">
+    <value>Take Signature</value>
+  </data>
+  <data name="SrialNo" xml:space="preserve">
+    <value>Serial No.</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="StartCamera" xml:space="preserve">
+    <value>Start Camera</value>
+  </data>
+  <data name="StartSignature" xml:space="preserve">
+    <value>Start Signature</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="SupervisorApprovalForComment" xml:space="preserve">
+    <value>Supervisor approval:</value>
+  </data>
+  <data name="SupportingDocument" xml:space="preserve">
+    <value>Supporting Document</value>
+  </data>
+  <data name="SupportingDocuments" xml:space="preserve">
+    <value>Supporting Documents</value>
+  </data>
+  <data name="Surename" xml:space="preserve">
+    <value>Surename</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Surname</value>
+  </data>
+  <data name="Suspended" xml:space="preserve">
+    <value>Suspended</value>
+  </data>
+  <data name="SuspendedUntil" xml:space="preserve">
+    <value>Suspended until</value>
+  </data>
+  <data name="Telephone" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="TempLicenseMsg" xml:space="preserve">
+    <value>Click on a serial number to see its collector details below</value>
+  </data>
+  <data name="TemporaryLicnese" xml:space="preserve">
+    <value>Temporary Licnese</value>
+  </data>
+  <data name="ToScreen" xml:space="preserve">
+    <value>To Screen</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Dictionary Name</value>
+  </data>
+  <data name="UpdateUser" xml:space="preserve">
+    <value>Update User</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="UserDetails" xml:space="preserve">
+    <value>User Details</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="ValidityPeriod" xml:space="preserve">
+    <value>Validity Period</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="VehicleRestriction" xml:space="preserve">
+    <value>Vehicle Restriction</value>
+  </data>
+  <data name="VehicleRestrictions" xml:space="preserve">
+    <value>Vehicle restriction(s)</value>
+  </data>
+  <data name="VerifyPhoto" xml:space="preserve">
+    <value>Verify Photo</value>
+  </data>
+  <data name="Waive" xml:space="preserve">
+    <value>Waive</value>
+  </data>
+  <data name="Waived" xml:space="preserve">
+    <value>Waived</value>
+  </data>
+  <data name="WrittenBy" xml:space="preserve">
+    <value>Written by</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ZoomIn" xml:space="preserve">
+    <value>Zoom In</value>
+  </data>
+  <data name="ZoomOut" xml:space="preserve">
+    <value>Zoom Out</value>
+  </data>
+  <data name="EditExistingUser" xml:space="preserve">
+    <value>Edit Existing User</value>
+  </data>
+  <data name="DictType" xml:space="preserve">
+    <value>Dictionaty Type</value>
+  </data>
+  <data name="MSG_ReloginRequired" xml:space="preserve">
+    <value>Relogin please</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_FixValidationErrorsFirst" xml:space="preserve">
+    <value>Fix Validation Errors</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_ChangesWillBeDiscarded" xml:space="preserve">
+    <value>Changes will be discarded. Are you sure?</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_CaptureCollectorSign" xml:space="preserve">
+    <value>Capture collector's signature</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_AreYouSureYouWantToExit" xml:space="preserve">
+    <value>Are you sure you want to exit?</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_NoDataFoundInCRS" xml:space="preserve">
+    <value>No data found in population registration about this ID number.If the ID Card was is...</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_SaveSuccessfully" xml:space="preserve">
+    <value>Saved successfully</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_PersonExists" xml:space="preserve">
+    <value>Person exist in Data Base. Issuance of New Licence for this person is not allowed.</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_OpenApplicationFound" xml:space="preserve">
+    <value>There are open applications found with this Intref</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_GenericInterfaceCRSError" xml:space="preserve">
+    <value>CRS DB Connection Error</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_SupportingDocumentsScanIsRequired" xml:space="preserve">
+    <value>Supporting documents scan is required.</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_ValueExists" xml:space="preserve">
+    <value>Value already exists</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_PersonDeceased" xml:space="preserve">
+    <value>Person appears as deceased in CRS</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_NoCollectedId" xml:space="preserve">
+    <value>No collected ID card recorded for this applicant in CRS</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_FailedWhileSaving" xml:space="preserve">
+    <value>Save failed, contact supervisor.</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_PasswordChanedSuccessRedirectToMenu" xml:space="preserve">
+    <value>MessageHeader
+</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_AreYouSureYouWantToChangeLang" xml:space="preserve">
+    <value>Changing Language will reload the system. Are you sure?</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_HandleChanges" xml:space="preserve">
+    <value>Found changes, press YES to save them, or No to discard them</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MenuAdmin" xml:space="preserve">
+    <value>Administration</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuCardDistribution" xml:space="preserve">
+    <value>Card Distribution</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuCardInfo" xml:space="preserve">
+    <value>Card Info</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuCollection" xml:space="preserve">
+    <value>Collection</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuDemographicData" xml:space="preserve">
+    <value>Demographic Data</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuEmployment" xml:space="preserve">
+    <value>Employment</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuEnrollement" xml:space="preserve">
+    <value>Enrollement</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuFingerprint" xml:space="preserve">
+    <value>Fingerprint</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuGoverment" xml:space="preserve">
+    <value>Goverment</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuImages" xml:space="preserve">
+    <value>Images</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuPermissions" xml:space="preserve">
+    <value>Permissions</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuRegistration" xml:space="preserve">
+    <value>Registration</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuReplacement" xml:space="preserve">
+    <value>Replacement</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuRole" xml:space="preserve">
+    <value>Role</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuSettings" xml:space="preserve">
+    <value>Settings</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuSystemSettings" xml:space="preserve">
+    <value>System Settings</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuUser" xml:space="preserve">
+    <value>User</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuUserManagement" xml:space="preserve">
+    <value>User Management</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuUtilities" xml:space="preserve">
+    <value>Utilities</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuVerification" xml:space="preserve">
+    <value>Verification</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="Fe" xml:space="preserve">
+    <value>Female</value>
+    <comment>DicSex</comment>
+  </data>
+  <data name="Ma" xml:space="preserve">
+    <value>Male</value>
+    <comment>DicSex</comment>
+  </data>
+  <data name="Un" xml:space="preserve">
+    <value>Unknown</value>
+    <comment>DicSex</comment>
+  </data>
+  <data name="ActiveCode" xml:space="preserve">
+    <value>Active</value>
+    <comment>DicUserStatus</comment>
+  </data>
+  <data name="PassiveCode" xml:space="preserve">
+    <value>Passive</value>
+    <comment>DicUserStatus</comment>
+  </data>
+  <data name="ERR_PasswordSecureValidation" xml:space="preserve">
+    <value>Password should be at least one capital letter, numbers and ..</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ERR_NewPassOldPassMustBeDifferent" xml:space="preserve">
+    <value>New password must be different from the current password!</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ERR_ConfirmPasswordAndNewPasswordnotMatch" xml:space="preserve">
+    <value>Confirm Password and New Password do not match</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ERR_UsernameInUse" xml:space="preserve">
+    <value>Username already in use</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_PleaseLogout" xml:space="preserve">
+    <value>In order for the changes to take effect, a Re-Login is required.</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_SystemAlreadyOpenOnThisPc" xml:space="preserve">
+    <value>System already open on this computer</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_PasswordRequired" xml:space="preserve">
+    <value>Password must contain minimum 4 characters with at least one digit, one upper-case and one lower-case letter</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ERR_RoleNameUnique" xml:space="preserve">
+    <value>Role Name must be unique</value>
+    <comment>Message</comment>
+  </data>
+  <data name="BTN_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Button</comment>
+  </data>
+  <data name="ERR_StringLength" xml:space="preserve">
+    <value>The length for this field must be {0}</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ERR_StringLengthMinMax" xml:space="preserve">
+    <value>The length for this field must be between {0} and {1}</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ERR_UniqueRoleName" xml:space="preserve">
+    <value>Role name must be uniqe</value>
+    <comment>Message</comment>
+  </data>
+  <data name="BTN_Ok" xml:space="preserve">
+    <value>OK</value>
+    <comment>Button</comment>
+  </data>
+  <data name="BTN_Yes" xml:space="preserve">
+    <value>Yes</value>
+    <comment>Button</comment>
+  </data>
+  <data name="BTN_No" xml:space="preserve">
+    <value>No</value>
+    <comment>Button</comment>
+  </data>
+  <data name="BTN_ClearData" xml:space="preserve">
+    <value>Clear Data</value>
+    <comment>Button</comment>
+  </data>
+  <data name="BTN_Relogin" xml:space="preserve">
+    <value>Relogin</value>
+    <comment>Button</comment>
+  </data>
+  <data name="MSG_ErorDbConnection" xml:space="preserve">
+    <value>Error on database connection, please contact system administrator</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_ErrorRequestTimeOut" xml:space="preserve">
+    <value>Error connecting to server, please try again or contact system administrator</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_ServerConnectionDead" xml:space="preserve">
+    <value>Communication with the server timed out, please restart the application.</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_UnexpectedError" xml:space="preserve">
+    <value>An unexpected event occured. Contact system administrator</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_NetworkError" xml:space="preserve">
+    <value>Network error, Contact system administrator</value>
+    <comment>Message</comment>
+  </data>
+  <data name="UpdateVersionWindowTitle" xml:space="preserve">
+    <value>Update Application</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="BlackList" xml:space="preserve">
+    <value>Black List</value>
+    <comment>Module</comment>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+    <comment>Module</comment>
+  </data>
+  <data name="Identification" xml:space="preserve">
+    <value>Identification</value>
+    <comment>Module</comment>
+  </data>
+  <data name="MenuBlackList" xml:space="preserve">
+    <value>Black List</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuDataEntry" xml:space="preserve">
+    <value>Data Entry</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuEnquiry" xml:space="preserve">
+    <value>Enquiry</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuDataEntryScreen" xml:space="preserve">
+    <value>Data Entry</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuDecisionMakingScreen" xml:space="preserve">
+    <value>Decision Making</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuEnquiryScreen" xml:space="preserve">
+    <value>Enquiry</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MenuDecisionMaking" xml:space="preserve">
+    <value>Decision Making</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="IDType" xml:space="preserve">
+    <value>ID Type</value>
+    <comment>Label</comment>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+    <comment>Label</comment>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+    <comment>Label</comment>
+  </data>
+  <data name="ActionRequired" xml:space="preserve">
+    <value>Action Required</value>
+    <comment>Label</comment>
+  </data>
+  <data name="Attachements" xml:space="preserve">
+    <value>Attachements</value>
+    <comment>Label</comment>
+  </data>
+  <data name="BirthDate" xml:space="preserve">
+    <value>Birth Date</value>
+    <comment>Label</comment>
+  </data>
+  <data name="BlackListRecordNo" xml:space="preserve">
+    <value>Black List Record No</value>
+    <comment>Label</comment>
+  </data>
+  <data name="BlockType" xml:space="preserve">
+    <value>Block Type</value>
+    <comment>Label</comment>
+  </data>
+  <data name="CreatedFrom" xml:space="preserve">
+    <value>Created from</value>
+    <comment>Label</comment>
+  </data>
+  <data name="DetailsOfInterdiction" xml:space="preserve">
+    <value>Details of Interdiction</value>
+    <comment>Label</comment>
+  </data>
+  <data name="FirstName1" xml:space="preserve">
+    <value>First Name 1</value>
+    <comment>Label</comment>
+  </data>
+  <data name="FirstName2" xml:space="preserve">
+    <value>First Name 2</value>
+    <comment>Label</comment>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Gender</value>
+    <comment>Label</comment>
+  </data>
+  <data name="Institution" xml:space="preserve">
+    <value>Institution</value>
+    <comment>Label</comment>
+  </data>
+  <data name="InternalFileNo" xml:space="preserve">
+    <value>Internal File No</value>
+    <comment>Label</comment>
+  </data>
+  <data name="LastName1" xml:space="preserve">
+    <value>Last Name 1</value>
+    <comment>Label</comment>
+  </data>
+  <data name="LastName2" xml:space="preserve">
+    <value>Last Name 2</value>
+    <comment>Label</comment>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
+    <comment>Button</comment>
+  </data>
+  <data name="NoAttachmentsFound" xml:space="preserve">
+    <value>No attachements found</value>
+    <comment>Label</comment>
+  </data>
+  <data name="PersonalData" xml:space="preserve">
+    <value>Personal Data</value>
+    <comment>Label</comment>
+  </data>
+  <data name="ProcessingSteps" xml:space="preserve">
+    <value>Processing Steps</value>
+    <comment>Label</comment>
+  </data>
+  <data name="RequestData" xml:space="preserve">
+    <value>Request Data</value>
+    <comment>Label</comment>
+  </data>
+  <data name="RequestNo" xml:space="preserve">
+    <value>Request No</value>
+    <comment>Label</comment>
+  </data>
+  <data name="RequestStatus" xml:space="preserve">
+    <value>Request Status</value>
+    <comment>Label</comment>
+  </data>
+  <data name="RequestType" xml:space="preserve">
+    <value>Request Type</value>
+    <comment>Label</comment>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+    <comment>Button</comment>
+  </data>
+  <data name="SearchParameters" xml:space="preserve">
+    <value>Search Parameters</value>
+    <comment>Label</comment>
+  </data>
+  <data name="SearchResults" xml:space="preserve">
+    <value>Search Results</value>
+    <comment>Label</comment>
+  </data>
+  <data name="StopType" xml:space="preserve">
+    <value>Stop Type</value>
+    <comment>Label</comment>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>to</value>
+  </data>
+  <data name="ValidUntil" xml:space="preserve">
+    <value>Valid Until</value>
+    <comment>Label</comment>
+  </data>
+  <data name="ERR_DateFromBeforeDateTo" xml:space="preserve">
+    <value>Date from must be earlier than Date to</value>
+    <comment>Message</comment>
+  </data>
+  <data name="FailedSearchNeedTorefineParams" xml:space="preserve">
+    <value>Cannot display all search results , please refine input parameters</value>
+    <comment>Message</comment>
+  </data>
+  <data name="GivenNames" xml:space="preserve">
+    <value>Given Names</value>
+    <comment>Label</comment>
+  </data>
+  <data name="RequestDate" xml:space="preserve">
+    <value>Request Date</value>
+    <comment>Label</comment>
+  </data>
+  <data name="Partial" xml:space="preserve">
+    <value>Partial</value>
+    <comment>Label</comment>
+  </data>
+  <data name="Reason" xml:space="preserve">
+    <value>Reason</value>
+    <comment>Label</comment>
+  </data>
+  <data name="MSG_NoDataFound" xml:space="preserve">
+    <value>No data found</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_SendForApproval" xml:space="preserve">
+    <value>Send for Approval</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Terminate" xml:space="preserve">
+    <value>Terminate</value>
+    <comment>Label</comment>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+    <comment>Label</comment>
+  </data>
+  <data name="Approve" xml:space="preserve">
+    <value>Approve</value>
+    <comment>Label</comment>
+  </data>
+  <data name="Reject" xml:space="preserve">
+    <value>Reject</value>
+    <comment>Label</comment>
+  </data>
+  <data name="MenuEnquiriesScreen" xml:space="preserve">
+    <value>Enquiries</value>
+    <comment>Menu</comment>
+  </data>
+  <data name="MSG_SubmitSuccessfully" xml:space="preserve">
+    <value>Request submitted succeesfully</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_TerminatedSuccessfully" xml:space="preserve">
+    <value>Request terminated succeesfully</value>
+    <comment>Message</comment>
+  </data>
+  <data name="MSG_UpdatedSuccessfully" xml:space="preserve">
+    <value>Request updated succeesfully</value>
+    <comment>Message</comment>
+  </data>
+  <data name="BiometricData" xml:space="preserve">
+    <value>Biometric Data</value>
+  </data>
+  <data name="Enrol" xml:space="preserve">
+    <value>Enrollment</value>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="Startover" xml:space="preserve">
+    <value>Startover</value>
+  </data>
+  <data name="MiddleName" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="ResetData" xml:space="preserve">
+    <value>Reset Data</value>
+  </data>
+  <data name="SearchPerson" xml:space="preserve">
+    <value>Search Person</value>
+  </data>
+  <data name="NOTIF_AppAlreadySaved" xml:space="preserve">
+    <value>This application has been saved by another user</value>
+  </data>
+  <data name="NOTIF_CheckingFingerprintLicense" xml:space="preserve">
+    <value>Checking Fingerprint License</value>
+  </data>
+  <data name="NOTIF_EnterSearchParameters" xml:space="preserve">
+    <value>Enter search parameters</value>
+  </data>
+  <data name="NOTIF_FileDoesntExist" xml:space="preserve">
+    <value>File doesn’t exist</value>
+  </data>
+  <data name="NOTIF_FixValidationErrors" xml:space="preserve">
+    <value>Fix validation errors</value>
+  </data>
+  <data name="NOTIF_HasOpenApplication" xml:space="preserve">
+    <value>The applicant already has open application</value>
+  </data>
+  <data name="NOTIF_NoDataFound" xml:space="preserve">
+    <value>No data found</value>
+  </data>
+  <data name="NOTIF_SavedSuccessfuly" xml:space="preserve">
+    <value>Saved successfully</value>
+  </data>
+  <data name="NOTIF_SaveYourChanges" xml:space="preserve">
+    <value>Please save or clear your changes</value>
+  </data>
+  <data name="NOTIF_SavingData" xml:space="preserve">
+    <value>Saving data...</value>
+  </data>
+  <data name="NOTIF_NoPersonFound" xml:space="preserve">
+    <value>No person found in repository, enter new applicant details</value>
+  </data>
+  <data name="IDNumberError" xml:space="preserve">
+    <value>ID Number is not valid</value>
+  </data>
+  <data name="MSG_IDPasswordFormatError" xml:space="preserve">
+    <value>Document ID format not valid</value>
+  </data>
+  <data name="PasswordNumberError" xml:space="preserve">
+    <value>Pussword number is not valid</value>
+  </data>
+  <data name="MSG_GenderSelectError" xml:space="preserve">
+    <value>Gender is incorrect</value>
+  </data>
+  <data name="Enroll" xml:space="preserve">
+    <value>Enroll</value>
+  </data>
+  <data name="Btn_Back" xml:space="preserve">
+    <value>Back</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Btn_CaptureAll" xml:space="preserve">
+    <value>Capture One By One</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Btn_CaptureMulti" xml:space="preserve">
+    <value>Capture All</value>
+    <comment>Button</comment>
+  </data>
+  <data name="MSG_RegistraionCompleted" xml:space="preserve">
+    <value>Registration is completed</value>
+  </data>
+  <data name="MSG_RegistraionWaitInvestigation" xml:space="preserve">
+    <value>Registration waits for Investigation</value>
+  </data>
+  <data name="MSG_RegistraionRejected" xml:space="preserve">
+    <value>Registration is Rejected</value>
+  </data>
+  <data name="SelectFinger" xml:space="preserve">
+    <value>Select Finger</value>
+  </data>
+  <data name="Registration" xml:space="preserve">
+    <value>Registration</value>
+    <comment>Label</comment>
+  </data>
+  <data name="BTN_Take" xml:space="preserve">
+    <value>Take</value>
+    <comment>Button</comment>
+  </data>
+  <data name="BTN_Verify" xml:space="preserve">
+    <value>Verify</value>
+    <comment>Button</comment>
+  </data>
+  <data name="BTN_StopVerify" xml:space="preserve">
+    <value>Stop Verify</value>
+    <comment>Button</comment>
+  </data>
+  <data name="Verification" xml:space="preserve">
+    <value>Verification</value>
+    <comment>Label</comment>
+  </data>
+  <data name="BTN_Submit" xml:space="preserve">
+    <value>Submit</value>
+    
+    <comment>Button</comment>
+  </data>
+  <data name="MSG_Terminate" xml:space="preserve">
+    <value>Are you sure you want to terminate the request?</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ERR_UserIsPassive" xml:space="preserve">
+    <value>User is  inactive</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ERR_UsernameOrPasswordIncorrect" xml:space="preserve">
+    <value>Username or password is incorrect</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ERR_NewOldPasswordsMatch" xml:space="preserve">
+    <value>New and old password should be different</value>
+    <comment>Message</comment>
+  </data>
+  <data name="ERR_MustChangePassword" xml:space="preserve">
+    <value>Changing password is required</value>
+    <comment>Message</comment>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+    <comment>Label</comment>
+  </data>
+  <data name="ComputerName" xml:space="preserve">
+    <value>Computer Name</value>
+    <comment>Label</comment>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+    <comment>Label</comment>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+    <comment>Label</comment>
+  </data>
+  <data name="Site" xml:space="preserve">
+    <value>Site</value>
+    <comment>Label</comment>
+  </data>
+</root>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<barcode_properties>
+  <barcode_prop >
+    <name>IDNumber</name>
+    <description>ID Number</description>
+    <common_value>MRZ_DOCUMENT_NUMBER</common_value>
+
+    <!--<common_value_extra>
+      <common_value>MRZ_PERSONAL_DATA2</common_value>
+      <field>1</field>
+    </common_value_extra>-->
+    <type>ID</type>
+    <check_digit_mrz>True</check_digit_mrz>
+  </barcode_prop>
+  <!--
+  <barcode_prop>
+    <name>CitizenshipMasterType</name>
+    <description>Citizenship</description>
+    <common_value>MRZ_PERSONAL_DATA2</common_value>
+    <field>2</field>
+  </barcode_prop>
+  
+  <barcode_prop>
+    <name>Sex</name>
+    <description>Sex</description>
+    <common_value>MRZ_SEX</common_value>
+    <type>Sex</type> 
+</barcode_prop>
+
+  <barcode_prop>
+    <name>LastName</name>
+    <description>Surname</description>
+    <common_value>SURNAME</common_value>
+    <type>Names</type>
+  </barcode_prop>
+
+  <barcode_prop>
+    <name>FirstNames</name>
+    <description>First Name</description>
+    <common_value>GIVENNAME</common_value>
+    <type>Names</type>
+  </barcode_prop>
+  
+  <barcode_prop>
+    <name>DateOfBirth</name>
+    <description>Date of Birth</description>
+    <common_value>MRZ_BIRTH_DATE</common_value>
+    <check_digit_mrz>True</check_digit_mrz>
+</barcode_prop>
+
+    <name>IssueDate</name>
+    <description>Issue Date</description>
+    <common_value>ISSUE_DATE</common_value>
+    <should_compare_mrz>False</should_compare_mrz>
+    <check_digit_mrz>True</check_digit_mrz>
+  </barcode_prop>
+-->
+
+  <barcode_prop >
+    <name>SerialNumber</name>
+    <description>Serial Number</description>
+    <should_compare_mrz>False</should_compare_mrz>
+
+  </barcode_prop>
+  
+  <!--<barcode_prop>
+    <Name>Minutiae</Name>
+    <Description>Minutiae</Description>
+   <should_compare>False</should_compare>
+  </barcode_prop>-->
+
+</barcode_properties>

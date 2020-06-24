@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.1.33/NGU.Admin/ApiService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Pangea.MultiLanguage" />
+  <xs:import schemaLocation="http://192.168.1.33/NGU.Admin/ApiService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/NGU.Admin.Enums" />
+  <xs:import schemaLocation="http://192.168.1.33/NGU.Admin/ApiService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/NGU.Admin.Core" />
+  <xs:element name="IsAlive">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsAliveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsAliveResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckUserValidityWithPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Pangea.MultiLanguage" minOccurs="0" name="lang" nillable="true" type="q1:Languages" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/NGU.Admin.Enums" minOccurs="0" name="moduleID" nillable="true" type="q2:ModuleTypes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckUserValidityWithPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/NGU.Admin.Core" minOccurs="0" name="CheckUserValidityWithPasswordResult" nillable="true" type="q3:UserValidation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currentPassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newPassword" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Pangea.MultiLanguage" minOccurs="0" name="lang" nillable="true" type="q4:Languages" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/NGU.Admin.Enums" minOccurs="0" name="moduleID" nillable="true" type="q5:ModuleTypes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/NGU.Admin.Core" minOccurs="0" name="UpdateUserPasswordResult" nillable="true" type="q6:UserValidation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserListWithNamesOnly">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserListWithNamesOnlyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/NGU.Admin.Core" minOccurs="0" name="GetUserListWithNamesOnlyResult" nillable="true" type="q7:ArrayOfUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserMenus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Pangea.MultiLanguage" minOccurs="0" name="lang" type="q8:Languages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserMenusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/NGU.Admin.Core" minOccurs="0" name="GetUserMenusResult" nillable="true" type="q9:ArrayOfMenu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemParameters">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemParametersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/NGU.Admin.Core" minOccurs="0" name="GetSystemParametersResult" nillable="true" type="q10:ArrayOfSystemParameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGenders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Pangea.MultiLanguage" minOccurs="0" name="lang" type="q11:Languages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGendersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/NGU.Admin.Core" minOccurs="0" name="GetGendersResult" nillable="true" type="q12:ArrayOfSex" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Pangea.MultiLanguage" minOccurs="0" name="lang" type="q13:Languages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/NGU.Admin.Core" minOccurs="0" name="GetCountriesResult" nillable="true" type="q14:ArrayOfCountry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIdenTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Pangea.MultiLanguage" minOccurs="0" name="lang" type="q15:Languages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIdenTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/NGU.Admin.Core" minOccurs="0" name="GetIdenTypesResult" nillable="true" type="q16:ArrayOfIdenType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertLogoutUserLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/NGU.Admin.Core" minOccurs="0" name="user" nillable="true" type="q17:User" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/NGU.Admin.Enums" minOccurs="0" name="moduleID" type="q18:ModuleTypes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertLogoutUserLogResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+=======
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/NGU.Admin.Enums" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NGU.Admin.Enums" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="ModuleTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Global" />
+      <xs:enumeration value="Admin" />
+      <xs:enumeration value="BlackList" />
+      <xs:enumeration value="Identification" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ModuleTypes" nillable="true" type="tns:ModuleTypes" />
+  <xs:simpleType name="UserLoginResultTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="Faild" />
+      <xs:enumeration value="ChangePasswordRequired" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UserLoginResultTypes" nillable="true" type="tns:UserLoginResultTypes" />
+  <xs:simpleType name="UserValidationTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Faild" />
+      <xs:enumeration value="UserNotFound" />
+      <xs:enumeration value="PasswordIncorrect" />
+      <xs:enumeration value="UserNotActive" />
+      <xs:enumeration value="UserLoggedToManyTimes" />
+      <xs:enumeration value="NewAndOldPasswordMatch" />
+      <xs:enumeration value="Success" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UserValidationTypes" nillable="true" type="tns:UserValidationTypes" />
+>>>>>>> dev
+</xs:schema>

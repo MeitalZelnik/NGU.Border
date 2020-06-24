@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping
+  xmlns="urn:nhibernate-mapping-2.2"
+  assembly="NGU.Core"
+  namespace="NGU.Core">
+
+  <class name="Request" table="REQUESTS" >
+    <id name="ID" column="ID" type="System.Int64">
+      <generator class="increment"/>
+    </id>
+
+    <property name="Num" column="NUM" type="System.String" not-null="true"/>
+    <many-to-one name="RequestType" column="REQUEST_TYPE_ID" class="RequestType" not-null="true"/>
+    <many-to-one name="RequestSubType" column="REQUEST_SUB_TYPE_ID" class="RequestSubType" not-null="false"/>
+
+    <property name="IdenTypeID" column="IDEN_TYPE_ID" type="System.Int32" not-null="false"/>
+    <property name="IdenNum" column="IDEN_NUM" type="System.String" not-null="false"/>
+    <property name="IdenCountryID" column="IDEN_COUNTRY_ID" type="System.Int32" not-null="false">
+      <meta attribute="Nullable"/>
+    </property>
+
+    <property name="DocCode" column="DOC_CODE" type="System.String" not-null="false"/>
+	<property name="DocNationalityID" column="DOC_NATIONALITY_ID" type="System.Int64" not-null="false">
+		<meta attribute="Nullable"/>
+	</property>
+    <property name="DocExpirationDate" column="DOC_EXPIRATION_DATE" type="System.DateTime" not-null="false"/>
+    <many-to-one name="Person" column="PERSON_ID" class="Person" not-null="false"/>
+    <property name="FirstName" column="FIRST_NAME" type="System.String" not-null="false"/>
+    <property name="MiddleName" column="MIDDLE_NAME" type="System.String" not-null="false"/>
+    <property name="LastName" column="LAST_NAME" type="System.String" not-null="false"/>
+
+    <property name="GenderID" column="GENDER_ID" type="System.Int32" not-null="false">
+      <meta attribute="Nullable"/>
+    </property>
+
+    <property name="BirthDate" column="BIRTH_DATE" type="System.DateTime" not-null="false"/>
+    <property name="IsMatch1ToManyRes" column="MATCH_1_TO_M_RESULT_FLAG" type="Pangea.Hibernate.UserTypes.NumberToBoolUserType, Pangea.Hibernate" not-null="false"/>
+    <property name="IsMatch1ToOneRes" column="MATCH_1_TO_1_RESULT_FLAG" type="Pangea.Hibernate.UserTypes.NumberToBoolUserType, Pangea.Hibernate" not-null="false"/>
+    <property name="IsMatchTextDataRes" column="MATCH_TEXT_DATA_FLAG" type="Pangea.Hibernate.UserTypes.NumberToBoolUserType, Pangea.Hibernate" not-null="false"/>
+    <many-to-one name="RequestStatus" column="STATUS_ID" class="RequestStatus" not-null="true"/>
+    <property name="StatusDate" column="STATUS_DATE" type="System.DateTime" not-null="true"/>
+    <many-to-one name="RequestReason" column="REASON_ID" class="RequestReason" not-null="false"/>
+    <property name="Remarks" column="REMARKS" type="System.String" not-null="false"/>
+
+	  <property name="PriorityID" column="PRIORITY_ID" type="System.Int32" not-null="false">
+		  <meta attribute="Nullable"/>
+	  </property>
+
+	  <property name="SiteID" column="SITE_ID" type="System.Int32" not-null="false">
+		  <meta attribute="Nullable"/>
+	  </property>
+
+    <property name="CreateUserID" column="CREATE_USER" type="System.Int64" not-null="true"/>
+    <property name="UpdateUserID" column="UPDATE_USER" type="System.Int64" not-null="true"/>
+
+
+    <!--readonly-->
+    <property name="CreateDate" column="CREATE_DATE" type="System.DateTime" update="false" insert="false" generated="insert" />
+    <property name="UpdateDate" column="UPDATE_DATE" type="System.DateTime" update="false" insert="false" generated="insert" />
+
+  </class>
+</hibernate-mapping>

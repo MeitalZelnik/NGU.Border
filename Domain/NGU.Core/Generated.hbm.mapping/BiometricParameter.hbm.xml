@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping
+  xmlns="urn:nhibernate-mapping-2.2"
+  assembly="NGU.Core"
+  namespace="NGU.Core">
+
+  <class name="BiometricParameter" table="BIOMETRICS_PARAMETER" >
+    <id name="ID" column="ID" type="System.Int32">
+      <generator class="assigned"/>
+    </id>
+
+    <property name="SystemId" column="SYSTEM_ID" type="System.Int32" not-null="true"/>
+    <property name="BiometricType" column="BIOMETRIC_TYPE" type="System.String" not-null="true"/>
+    <property name="IsMandatory" column="MANDATORY_FLAG" type="Pangea.Hibernate.UserTypes.NumberToBoolUserType, Pangea.Hibernate" not-null="true"/>
+    <property name="ExpirationFactor" column="EXPIRATION_FACTOR" type="System.Int32" not-null="false"/>
+    <property name="IsActiveRecord" column="ACTIVE_RECORD_FLAG" type="Pangea.Hibernate.UserTypes.NumberToBoolUserType, Pangea.Hibernate"/>
+    
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,2 @@
+﻿should add to Pre-build event the next command:
+$(ProjectDir)hbm2net\NHibernate.Tool.hbm2net\NHibernate.Tool.hbm2net.Console.exe --config="$(ProjectDir)hbm2net\nvelocity.config.xml" --output="$(ProjectDir)GeneratedClasses" "$(ProjectDir)Generated.hbm.mapping\*.hbm.xml"

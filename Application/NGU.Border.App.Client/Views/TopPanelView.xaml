@@ -1,0 +1,140 @@
+﻿<UserControl x:Class="NGU.App.Client.Views.TopPanelView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:ClientWPF="clr-namespace:Pangea.Client.WPF;assembly=Pangea.Client.WPF"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:lang="clr-namespace:NGU.Lang;assembly=NGU.Lang"
+             xmlns:customControls="clr-namespace:Pangea.Client.WPF.CustomControls;assembly=Pangea.Client.WPF.CustomControls"
+             xmlns:convc="clr-namespace:NGU.Common.Converters;assembly=NGU.Common"
+             xmlns:Controls="clr-namespace:Pangea.Client.WPF.UserControls;assembly=Pangea.Client.WPF"
+             MouseLeave="UserControl_MouseLeave">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <convc:BoolToNegativeVisibilityConverter x:Key="BoolToNegativeVisibilityConverter"/>
+            <convc:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
+            <convc:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+            <convc:CapitalFirstLetterConverter x:Key="CapitalFirstLetterConverter" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border VerticalAlignment="Stretch" x:Name="Header">
+        <Grid>
+            <DockPanel LastChildFill="False">
+                <!-- Menu buttons -->
+                <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
+                    <Border BorderThickness="1" DockPanel.Dock="Left" Margin="4 1 1 1" Height="35">
+                        <Image  Source="{DynamicResource SystemAdministrationIcon}" >
+                            <!--<Image.ToolTip>
+                                <TextBlock>
+                                <Run Text="Version" /> <Run Text="{Binding VersionNo, Mode=OneWay}" />
+                                </TextBlock>
+                            </Image.ToolTip>-->
+                        </Image>
+                    </Border>
+                    <!--<customControls:ToolbarButton Margin="10 0 0 0"
+                                                  Command="{Binding ChangeCurrentViewCommand}"
+                                                  CommandParameter="Exit"
+                                                  Text="{x:Static lang:Resources.Exit}"
+                                                  ImageSource="{DynamicResource HomeIcon}" 
+                                                  Visibility="{Binding IsMainMenu, Converter={StaticResource BoolToVisibilityConverter}}"
+                                                  AutomationProperties.AutomationId="Exit"/>-->
+                    <customControls:ToolbarButton Margin="22 0 0 0" 
+                                                  Command="{Binding ChangeCurrentViewCommand}"
+                                                  CommandParameter="MainMenu"
+                                                  Text="{x:Static lang:Resources.Home}"
+                                                  ImageSource="{StaticResource HomeIcon}" 
+                                                  Visibility="{Binding IsMainMenu, Converter={StaticResource BoolToNegativeVisibilityConverter}}"
+                                                  AutomationProperties.AutomationId="MainMenu"/>
+                    <customControls:ToolbarButton Margin="22 0 0 0" 
+                                                  Command="{Binding ChangeCurrentViewCommand}"
+                                                  CommandParameter="Back"
+                                                  Text="{x:Static lang:Resources.Back}"
+                                                  ImageSource="{StaticResource BackIcon}" 
+                                                  Visibility="{Binding IsModule, Converter={StaticResource BoolToVisibilityConverter}}"
+                                                  AutomationProperties.AutomationId="Back"/>
+                    <!--<Border Style="{StaticResource ToolbarSeparatorBorderStyle}" />-->
+                </StackPanel>
+
+                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Margin="6" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <ComboBox Style="{StaticResource ComboBoxFlatStyledarkMode}" 
+                         Margin="5" ItemsSource="{Binding AllLanguages}" SelectedItem="{Binding SelectedLang,Mode=TwoWay}"  
+                         ClientWPF:SelectorBehavior.SelectionChangedCommand="{Binding ChangeLangCommand, Mode=OneTime}">
+
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                    <StackPanel>
+                                        <Image Source="{Binding Image}" Width="20" Height="20"></Image>
+                                    </StackPanel>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+
+                    </ComboBox>
+
+                    <Button x:Name="MinizeButton"
+                            Style="{StaticResource MinimizeButtonStyle}"
+                            Command="{Binding MinimizeWindowCommand}"
+                            CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"
+                            Margin="0,0,5,0"/>
+                    <Button x:Name="HelpBtn"
+                            Command="{Binding HelpCommand}"
+                            Style="{StaticResource HelpButtonStyle}"
+                            Margin="0,0,5,0"/>
+                    <Button x:Name="CloseBtn"
+                            Command="{Binding CloseSystemCommand}"
+                            CommandParameter="Exit"
+                            Style="{StaticResource EscButtonStyle}"/>
+                </StackPanel>
+
+                <!-- User settings popup -->
+                <!--<Controls:UserPopupMenu Name="pMenu" DockPanel.Dock="Right" VerticalAlignment="Center"
+                                       LogoutCommand="{Binding LogoutUserCommand}"
+                                       UserPhoto="{Binding UserPhoto}"
+                                       ChangePasswordCommand="{Binding ChangePasswordCommand}"
+                                       Role="{Binding Role}" 
+                                       Location="{Binding Location}"
+                                       ComputerName="{Binding ComputerName}" 
+                                       Visibility="{Binding IsUserLogged, Converter={StaticResource BoolToVisibilityConverter}}"
+                                       UserName="{Binding UserName}"
+                                       UserFullName="{Binding UserFullName, Converter={StaticResource CapitalFirstLetterConverter}, Mode=OneWay}"
+                                       AutomationProperties.AutomationId="UserPopup"/>-->
+
+
+
+                <Controls:UserPopupMenu Name="pMenu" DockPanel.Dock="Right" VerticalAlignment="Center"
+                                        LogoutCommand="{Binding LogoutUserCommand}"
+                                        ChangePasswordCommand="{Binding ChangePasswordCommand}" 
+                                        UserPhoto="{Binding UserPhoto}"
+                                        
+                                        LogoutBtnText="{Binding LogoutBtnText}"
+                                        ChangePasswordBtnText="{Binding ChangePasswordBtnText}"
+                                        
+                                        RoleHeader="{Binding RoleHeader}"
+                                        Role="{Binding Role}"
+                                        
+                                        LocationHeader="{Binding LocationHeader}"
+                                        Location="{Binding Location}"
+                                                
+                                        UnitHeader="{Binding UnitHeader}"
+                                        Unit="{Binding Unit}"
+                                        
+                                        ComputerHeader="{Binding ComputerHeader}"
+                                        ComputerName="{Binding ComputerName}" 
+                                        
+                                        UserFullNameHeader="{Binding UserFullNameHeader}"
+                                        UserFullName="{Binding UserFullName, Converter={StaticResource CapitalFirstLetterConverter}, Mode=OneWay}"
+                                        
+                                        UserName="{Binding UserName}"
+                                        Visibility="{Binding IsUserLogged, Converter={StaticResource BoolToVisibilityConverter}}"
+                                        AutomationProperties.AutomationId="UserPopup"/>
+            </DockPanel>
+
+            <!-- Header Title-->
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Text="{Binding HeaderTitle}"
+                       Style="{StaticResource WindowTitleStyle}"/>
+        </Grid>
+    </Border>
+</UserControl>

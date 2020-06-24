@@ -1,0 +1,90 @@
+﻿<Window x:Class="NGU.Common.Windows.DialogBoxWindow"
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:lang="clr-namespace:NGU.Lang;assembly=NGU.Identity.Lang"
+        SizeToContent="WidthAndHeight"
+        Topmost="True"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ThreeDBorderWindow"
+        MinWidth="300" >
+    <!--Icon="{StaticResource SystemIcon}"-->
+    <!--Icon="{StaticResource SystemIcon}">-->
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style TargetType="{x:Type Button}"
+                 BasedOn="{StaticResource ButtonMessageboxStyle}"/>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Margin="30 15 30 4"  Width="auto" HorizontalAlignment="Center">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="1" Margin="0,20" >
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Row="0" Grid.Column="0"
+                       Margin="-20 2 5 2"
+                       Visibility="Collapsed"
+                       x:Name="DialogTypesArea"
+                       Focusable="False"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Height="32"
+                       Width="32"
+                       Stretch="UniformToFill">
+                </Image>
+
+                <TextBlock Name="lbl"
+                           Grid.Column="1"
+                           MaxWidth="450" TextWrapping="WrapWithOverflow"
+                           VerticalAlignment="Center"
+                           Style="{StaticResource MessageTextblock}"/>
+            </Grid>
+
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            x:Name="ContentControlArea"
+                            Focusable="False">
+            </ContentControl>
+
+            <!--<StackPanel Grid.Row="2"
+                        Grid.Column="1"
+                        x:Name="OptionBtnContainer">
+            </StackPanel>-->
+
+            <Grid Grid.Row="3"
+                  Grid.Column="0"
+                  Grid.ColumnSpan="2"
+                  Margin="-4,0,-4,0">
+                
+                <StackPanel AutomationProperties.AutomationId="BtnContainer" x:Name="DialogBtnContainer" Orientation="Horizontal" HorizontalAlignment="Center">
+              
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

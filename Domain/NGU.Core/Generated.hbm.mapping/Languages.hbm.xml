@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping
+  xmlns="urn:nhibernate-mapping-2.2"
+  assembly="NGU.Core"
+  namespace="NGU.Core">
+
+  <class name="LocalizedNames" table="LANGUAGES">
+    <id name="ID" column="ID" type="System.String">
+      <generator class="assigned"/>
+    </id>
+
+    <property name="TableName" column="TABLE_NAME" type="System.String" not-null="true"/>
+    <property name="EN" column="EN" type="System.String" not-null="false"/>
+    <property name="FR" column="FR" type="System.String" not-null="false"/>
+    <property name="PT" column="PT" type="System.String" not-null="false"/>
+    <property name="SP" column="SP" type="System.String" not-null="false"/>
+
+  </class>
+</hibernate-mapping>

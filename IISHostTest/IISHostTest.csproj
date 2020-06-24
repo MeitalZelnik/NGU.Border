@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A9FDFD9-D232-410D-9741-42DA0E0DB845}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IISHostTest</RootNamespace>
+    <AssemblyName>IISHostTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NGU.Interfaces">
+      <HintPath>..\Domain\NGU.Interfaces\bin\Debug\NGU.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="NGU.Services">
+      <HintPath>..\Domain\NGU.Services\bin\Debug\NGU.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\Pangea.Logger.1.1.2.15\lib\net452\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.Config.Module, Version=1.0.0.29, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pangea.Fingerprints.2.0.12.29\lib\net452\Pangea.Config.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.Fingerprints.Interfaces, Version=2.0.12.29, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pangea.Fingerprints.2.0.12.29\lib\net452\Pangea.Fingerprints.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.Fingerprints.Lang, Version=1.0.0.29, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pangea.Fingerprints.2.0.12.29\lib\net452\Pangea.Fingerprints.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.Fingerprints10.UI, Version=2.0.12.29, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Pangea.Fingerprints.2.0.12.29\lib\net452\Pangea.Fingerprints10.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.Fingerprints10X64, Version=2.0.12.29, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Pangea.Fingerprints.2.0.12.29\lib\net452\Pangea.Fingerprints10X64.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.Log">
+      <HintPath>..\packages\Pangea.Logger.1.1.2.15\lib\net452\Pangea.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.Logger.Service.Interface">
+      <HintPath>..\packages\Pangea.Logger.1.1.2.15\lib\net452\Pangea.Logger.Service.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.Neurotec10x64, Version=2.0.12.29, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Pangea.Fingerprints.2.0.12.29\lib\net452\Pangea.Neurotec10x64.dll</HintPath>
+    </Reference>
+    <Reference Include="Pangea.UsbDevices, Version=1.0.0.29, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pangea.Fingerprints.2.0.12.29\lib\net452\Pangea.UsbDevices.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\PersonService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ReqService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Tester.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Config\fingerprint.config" />
+    <None Include="lib\FingersDetectSegmentsClassifier.ndf" />
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Service References\PersonService\IISHostTest.PersonService.Person.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PersonService\IISHostTest.PersonService.PersonDoc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PersonService\PersonService.wsdl" />
+    <None Include="Service References\PersonService\PersonService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PersonService\PersonService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PersonService\PersonService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PersonService\PersonService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PersonService\PersonService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PersonService\PersonService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReqService\IISHostTest.ReqService.Request.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReqService\IISHostTest.ReqService.RequestStatuses.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReqService\RequestService.wsdl" />
+    <None Include="Service References\ReqService\RequestService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReqService\RequestService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReqService\RequestService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReqService\RequestService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReqService\RequestService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\PersonService\" />
+    <WCFMetadataStorage Include="Service References\ReqService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReqService\RequestService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReqService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReqService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ReqService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PersonService\PersonService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PersonService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PersonService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PersonService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\icudt53.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\icuin53.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\icuuc53.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\LScanEssentials.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\NdmCrossMatchLScan.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\platforms\qwindows.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Core.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Gui.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Multimedia.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5MultimediaWidgets.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Network.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5OpenGL.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Positioning.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5PrintSupport.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Qml.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Quick.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Sensors.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Sql.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5WebChannel.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5WebKit.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5WebKitWidgets.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Widgets.dll" />
+    <Content Include="lib\FScanners\NdmCrossMatchLScan\Qt5Xml.dll" />
+    <Content Include="lib\FScanners\NdmGreenBit\DID20.dll" />
+    <Content Include="lib\FScanners\NdmGreenBit\DID20IP.dll" />
+    <Content Include="lib\FScanners\NdmGreenBit\DS40U.dll" />
+    <Content Include="lib\FScanners\NdmGreenBit\DS84C.dll" />
+    <Content Include="lib\FScanners\NdmGreenBit\GBMSAPI.dll" />
+    <Content Include="lib\FScanners\NdmGreenBit\MC517.dll" />
+    <Content Include="lib\FScanners\NdmGreenBit\MS527.dll" />
+    <Content Include="lib\FScanners\NdmGreenBit\NdmGreenBit.dll" />
+    <Content Include="lib\FScanners\NdmGreenBit\VsRoll.dll" />
+    <Content Include="lib\FScanners\NdmIntegratedBiometricsIBScanUltimate\IBScanUltimate.dll" />
+    <Content Include="lib\FScanners\NdmIntegratedBiometricsIBScanUltimate\NdmIntegratedBiometricsIBScanUltimate.dll" />
+    <Content Include="lib\libopenblas.dll" />
+    <Content Include="lib\LiveMedia.dll" />
+    <Content Include="lib\msvcp100.dll" />
+    <Content Include="lib\msvcp110.dll" />
+    <Content Include="lib\msvcp120.dll" />
+    <Content Include="lib\msvcp140.dll" />
+    <Content Include="lib\msvcp80.dll" />
+    <Content Include="lib\msvcp90.dll" />
+    <Content Include="lib\msvcr100.dll" />
+    <Content Include="lib\msvcr110.dll" />
+    <Content Include="lib\msvcr120.dll" />
+    <Content Include="lib\msvcr80.dll" />
+    <Content Include="lib\msvcr90.dll" />
+    <Content Include="lib\NBiometricClient.dll" />
+    <Content Include="lib\NBiometrics.dll" />
+    <Content Include="lib\NCluster.dll" />
+    <Content Include="lib\NClusterJni.dll" />
+    <Content Include="lib\NCore.dll" />
+    <Content Include="lib\NDevices.dll" />
+    <Content Include="lib\NdmMedia.dll" />
+    <Content Include="lib\NdmVirtual.dll" />
+    <Content Include="lib\Neurotec.Biometrics.Client.dll" />
+    <Content Include="lib\Neurotec.Biometrics.dll" />
+    <Content Include="lib\Neurotec.Biometrics.Gui.dll" />
+    <Content Include="lib\Neurotec.Cluster.dll" />
+    <Content Include="lib\Neurotec.Devices.dll" />
+    <Content Include="lib\Neurotec.Devices.Virtual.dll" />
+    <Content Include="lib\Neurotec.dll" />
+    <Content Include="lib\Neurotec.Gui.dll" />
+    <Content Include="lib\Neurotec.Licensing.dll" />
+    <Content Include="lib\Neurotec.Media.dll" />
+    <Content Include="lib\Neurotec.Media.Processing.dll" />
+    <Content Include="lib\NLicensing.dll" />
+    <Content Include="lib\NMedia.dll" />
+    <Content Include="lib\NMediaProc.dll" />
+    <Content Include="lib\Pangea.Devices.UI.Resources.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

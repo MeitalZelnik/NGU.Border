@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7C01F97-F59E-4877-AE4F-AA5159B3584D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NGU.BlackList.DAL</RootNamespace>
+    <AssemblyName>NGU.BlackList.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.Hibernate.1.0.1.45\lib\net452\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\BaseStructures.1.0.1.37\lib\net452\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Pangea.BaseStructures, Version=1.0.1.37, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\BaseStructures.1.0.1.37\lib\net452\Pangea.BaseStructures.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Pangea.Extensions, Version=1.0.0.13, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.Extensions.1.0.0.13\lib\net452\Pangea.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Pangea.Hibernate, Version=1.0.1.45, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Pangea.Hibernate.1.0.1.45\lib\net452\Pangea.Hibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Pangea.Log, Version=1.1.2.14, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\BaseStructures.1.0.1.37\lib\net452\Pangea.Log.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Pangea.Logger.Service.Interface, Version=1.0.0.14, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\BaseStructures.1.0.1.37\lib\net452\Pangea.Logger.Service.Interface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Pangea.Utils, Version=1.0.0.16, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\BaseStructures.1.0.1.37\lib\net452\Pangea.Utils.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\BaseStructures.1.0.1.37\lib\net452\PdfSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDAL.cs" />
+    <Compile Include="SystemDAL.cs" />
+    <Compile Include="ValueObjectDAL.cs" />
+    <Compile Include="UserDAL.cs" />
+    <Compile Include="PrinterDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NGU.BlackList.Core\NGU.BlackList.Core.csproj">
+      <Project>{5328caef-d2f3-43c7-95ef-2f88e8ab5479}</Project>
+      <Name>NGU.BlackList.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

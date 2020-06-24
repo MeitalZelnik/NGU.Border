@@ -1,0 +1,13 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="SideMenu.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Pangea.App.Design;component/GenericDictionaries.xaml"/>
+        <!--<ResourceDictionary Source="pack://application:,,,/NGU.App.OldResources;component/Generic.xaml"/>-->
+        
+        <ResourceDictionary Source="pack://application:,,,/Pangea.Fingerprints10.UI;component/Resources/AssemblyResourceDictionary.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Pangea.Devices.UI.Resources;component/AssemblyResourceDictionary.xaml"/>
+
+        <!--<ResourceDictionary Source="pack://application:,,,,/Pangea.App.Design/GenericDictionaries.xaml"/>-->
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping
+  xmlns="urn:nhibernate-mapping-2.2"
+  assembly="NGU.Core"
+  namespace="NGU.Core">
+
+  <class name="RequestReason" table="REQUEST_REASON" >
+    <meta  attribute="IsMultiLang"/>
+    <id name="ID" column="ID" type="System.Int32">
+      <generator class="assigned"/>
+    </id>
+
+    <property name="Code" column="CODE" type="System.String" not-null="true"/>
+    <property name="Name" column="NAME" type="System.String" not-null="true"/>
+    <property name="IsActiveRecord" column="ACTIVE_RECORD_FLAG" type="Pangea.Hibernate.UserTypes.NumberToBoolUserType, Pangea.Hibernate"/>
+
+    <many-to-one name="ServerLangHub" column="LANGUAGE_ID" class="LocalizedNames" not-null="true"/>
+
+  </class>
+</hibernate-mapping>

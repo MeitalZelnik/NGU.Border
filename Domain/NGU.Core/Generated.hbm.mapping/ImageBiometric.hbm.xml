@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping
+  xmlns="urn:nhibernate-mapping-2.2"
+  assembly="NGU.Core"
+  namespace="NGU.Core">
+
+  <class name="ImageBiometric" table="IMAGES" >
+    <id name="ID" column="ID" type="System.Int32">
+      <generator class="increment"/>
+    </id>
+    <many-to-one name="Request" column="REQUEST_ID" class="Request" not-null="true"/>
+    <many-to-one name="Person" column="PERSON_ID" class="Person" not-null="false"/>
+    <many-to-one name="ImageType" column="IMAGE_TYPE_ID" class="ImageType" not-null="true"/>
+
+    <property name="IsWaived" column="WAIVED" type="Pangea.Hibernate.UserTypes.NumberToBoolUserType, Pangea.Hibernate" not-null="true"/>
+    
+    <property name="Image" type="BinaryBlob" not-null="true">
+      <column sql-type="BLOB" name="IMAGE"/>
+    </property>
+
+    <property name="Template" type="BinaryBlob" not-null="true">
+      <column sql-type="BLOB" name="TEMPLATE"/>
+    </property>
+
+    <property name="CreateUserID" column="CREATE_USER" type="System.Int32" not-null="true"/>
+    <property name="UpdateUserID" column="UPDATE_USER" type="System.Int32" not-null="true"/>
+    
+    <!--readonly-->
+    <property name="CreateDate" column="CREATE_DATE" type="System.DateTime" update="false" insert="false" generated="insert" />
+    <property name="UpdateDate" column="UPDATE_DATE" type="System.DateTime" update="false" insert="false" generated="insert" />
+
+  </class>
+</hibernate-mapping>

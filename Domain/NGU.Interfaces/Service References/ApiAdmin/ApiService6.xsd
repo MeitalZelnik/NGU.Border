@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/NGU.Admin.Core" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NGU.Admin.Core" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.1.33/NGU.Admin/ApiService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/NGU.Admin.Enums" />
+  <xs:import schemaLocation="http://192.168.1.33/NGU.Admin/ApiService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Pangea.MultiLanguage" />
+  <xs:import schemaLocation="http://192.168.1.33/NGU.Admin/ApiService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" />
+  <xs:import schemaLocation="http://192.168.1.33/NGU.Admin/ApiService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="UserValidation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LoggedUser" nillable="true" type="tns:User" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/NGU.Admin.Enums" minOccurs="0" name="LoginResult" type="q1:UserLoginResultTypes" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Pangea.MultiLanguage" minOccurs="0" name="SelectedLanguage" type="q2:Languages" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/NGU.Admin.Enums" minOccurs="0" name="UserValidationType" type="q3:UserValidationTypes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserValidation" nillable="true" type="tns:UserValidation" />
+  <xs:complexType name="User">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" base="q4:ObjectValidationBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreateUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Finger1Num" type="xs:int" />
+          <xs:element minOccurs="0" name="Finger1WsqBlob" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="Finger2Num" type="xs:int" />
+          <xs:element minOccurs="0" name="Finger2WsqBlob" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="IdenCountryID" type="xs:int" />
+          <xs:element minOccurs="0" name="IdenNum" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdenType" nillable="true" type="tns:IdenType" />
+          <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastLogin" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LastPasswordUpdate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Menus" nillable="true" type="tns:ArrayOfMenu" />
+          <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NeedFPFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Photo" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="Roles" nillable="true" type="tns:ArrayOfRole" />
+          <xs:element minOccurs="0" name="Signature" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="Site" nillable="true" type="tns:Site" />
+          <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdateDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="UserStatus" type="xs:int" />
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="IdenType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" base="q5:MultiLanguage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActiveRecordFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DefaultCountryID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DefaultFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="MaskFormat" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PersonIdentityFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="ServerLangHub" nillable="true" type="tns:LocalizedNames" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IdenType" nillable="true" type="tns:IdenType" />
+  <xs:complexType name="LocalizedNames">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" base="q6:ObjectValidationBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TableName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LocalizedNames" nillable="true" type="tns:LocalizedNames" />
+  <xs:complexType name="ArrayOfMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Menu" nillable="true" type="tns:Menu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMenu" nillable="true" type="tns:ArrayOfMenu" />
+  <xs:complexType name="Menu">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" base="q7:MultiLanguage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Accessibility" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AllSubMenus" nillable="true" type="tns:ArrayOfMenu" />
+          <xs:element minOccurs="0" name="CreateUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="IsAccessible" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsPermitted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsSelectedMenu" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MenuImage" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="Module" type="xs:int" />
+          <xs:element minOccurs="0" name="ParentID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Sequence" type="xs:int" />
+          <xs:element minOccurs="0" name="ServerLangHub" nillable="true" type="tns:LocalizedNames" />
+          <xs:element minOccurs="0" name="SubMenus" nillable="true" type="tns:ArrayOfMenu" />
+          <xs:element minOccurs="0" name="UpdateUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="ViewModelTypeID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Menu" nillable="true" type="tns:Menu" />
+  <xs:complexType name="ArrayOfRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Role" nillable="true" type="tns:Role" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRole" nillable="true" type="tns:ArrayOfRole" />
+  <xs:complexType name="Role">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" base="q8:ObjectValidationBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreateUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="LogicalFunctionalities" nillable="true" type="tns:ArrayOfLogicalFunctionality" />
+          <xs:element minOccurs="0" name="Menus" nillable="true" type="tns:ArrayOfMenu" />
+          <xs:element minOccurs="0" name="ModuleID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UpdateDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="VisualFunctionalities" nillable="true" type="tns:ArrayOfVisualFunctionality" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Role" nillable="true" type="tns:Role" />
+  <xs:complexType name="ArrayOfLogicalFunctionality">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LogicalFunctionality" nillable="true" type="tns:LogicalFunctionality" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLogicalFunctionality" nillable="true" type="tns:ArrayOfLogicalFunctionality" />
+  <xs:complexType name="LogicalFunctionality">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" base="q9:ObjectValidationBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="ServerLangHub" nillable="true" type="tns:LocalizedNames" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LogicalFunctionality" nillable="true" type="tns:LogicalFunctionality" />
+  <xs:complexType name="ArrayOfVisualFunctionality">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VisualFunctionality" nillable="true" type="tns:VisualFunctionality" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVisualFunctionality" nillable="true" type="tns:ArrayOfVisualFunctionality" />
+  <xs:complexType name="VisualFunctionality">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" base="q10:ObjectValidationBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActiveRecordFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="IsDirty" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsEnable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsVisible" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Menu" nillable="true" type="tns:Menu" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RoleID" type="xs:int" />
+          <xs:element minOccurs="0" name="ServerLangHub" nillable="true" type="tns:LocalizedNames" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisualFunctionality" nillable="true" type="tns:VisualFunctionality" />
+  <xs:complexType name="Site">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" base="q11:MultiLanguage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActiveRecordFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Country" type="xs:int" />
+          <xs:element minOccurs="0" name="CreateUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="IsDirty" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsNew" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Location" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServerLangHub" nillable="true" type="tns:LocalizedNames" />
+          <xs:element minOccurs="0" name="SiteType" nillable="true" type="tns:SiteType" />
+          <xs:element minOccurs="0" name="UpdateUserID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Site" nillable="true" type="tns:Site" />
+  <xs:complexType name="SiteType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" base="q12:MultiLanguage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActiveRecordFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServerLangHub" nillable="true" type="tns:LocalizedNames" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SiteType" nillable="true" type="tns:SiteType" />
+  <xs:complexType name="ArrayOfUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
+  <xs:complexType name="ArrayOfSystemParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SystemParameter" nillable="true" type="tns:SystemParameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSystemParameter" nillable="true" type="tns:ArrayOfSystemParameter" />
+  <xs:complexType name="SystemParameter">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" base="q13:ObjectValidationBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActiveRecordFlag" type="ser:char" />
+          <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EditableFlag" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="InternalRemarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModuleID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SubjectID" type="xs:int" />
+          <xs:element minOccurs="0" name="UpdateDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UpdateUserID" type="xs:int" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemParameter" nillable="true" type="tns:SystemParameter" />
+  <xs:complexType name="ArrayOfSex">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Sex" nillable="true" type="tns:Sex" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSex" nillable="true" type="tns:ArrayOfSex" />
+  <xs:complexType name="Sex">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" base="q14:MultiLanguage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActiveRecordFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServerLangHub" nillable="true" type="tns:LocalizedNames" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Sex" nillable="true" type="tns:Sex" />
+  <xs:complexType name="ArrayOfCountry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Country" nillable="true" type="tns:Country" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCountry" nillable="true" type="tns:ArrayOfCountry" />
+  <xs:complexType name="Country">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" base="q15:MultiLanguage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActiveRecordFlag" type="xs:int" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServerLangHub" nillable="true" type="tns:LocalizedNames" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Country" nillable="true" type="tns:Country" />
+  <xs:complexType name="ArrayOfIdenType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IdenType" nillable="true" type="tns:IdenType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIdenType" nillable="true" type="tns:ArrayOfIdenType" />
+</xs:schema>

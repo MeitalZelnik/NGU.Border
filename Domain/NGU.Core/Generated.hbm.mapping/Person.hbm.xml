@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping
+  xmlns="urn:nhibernate-mapping-2.2"
+  assembly="NGU.Core"
+  namespace="NGU.Core">
+
+  <class name="Person" table="PERSON" >
+    <id name="ID" column="ID" type="System.Int64">
+      <generator class="assigned"/>
+    </id>
+
+    <property name="NationalityID" column="NATIONALITY_ID" type="System.Int64" not-null="false">
+      <meta attribute="Nullable"/>
+    </property>
+    <property name="GenderID" column="GENDER_ID" type="System.Int64" not-null="true">
+      <meta attribute="Nullable"/>
+    </property>
+    
+    <property name="FirstName" column="FIRST_NAME" type="System.String" not-null="false"/>
+    <property name="MiddleName" column="MIDDLE_NAME" type="System.String" not-null="false"/>
+    <property name="LastName" column="LAST_NAME" type="System.String" not-null="false"/>
+    <property name="BirthDate" column="BIRTH_DATE" type="System.DateTime" not-null="false"/>
+    <property name="StatusID" column="STATUS_ID" type="System.Int64" not-null="false"/>
+
+
+
+    <property name="CreateUserID" column="CREATE_USER" type="System.Int64" not-null="true"/>
+    <property name="UpdateUserID" column="UPDATE_USER" type="System.Int64" not-null="true"/>
+    
+    <!--readonly-->
+    <property name="CreateDate" column="CREATE_DATE" type="System.DateTime" update="false" insert="false" generated="insert" />
+    <property name="UpdateDate" column="UPDATE_DATE" type="System.DateTime" update="false" insert="false" generated="insert" />
+
+  </class>
+</hibernate-mapping>

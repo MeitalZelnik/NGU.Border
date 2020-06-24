@@ -1,0 +1,1290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>#TODO#_Ajouter &gt;&gt;</value>
+  </data>
+  <data name="ViewMore" xml:space="preserve">
+    <value>#TODO#_Afficher plus</value>
+  </data>
+  <data name="AddDocument" xml:space="preserve">
+    <value>#TODO#_Ajouter un document</value>
+  </data>
+  <data name="EnterUsername" xml:space="preserve">
+    <value>#TODO#_Entrer le nom d'utilisateur</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>#TODO#_Actif</value>
+  </data>
+  <data name="ActivityStatus" xml:space="preserve">
+    <value>#TODO#_#TODO#_Actif</value>
+  </data>
+  <data name="AddComment" xml:space="preserve">
+    <value>#TODO#_Ajouter un commentaire</value>
+  </data>
+  <data name="AddNewUser" xml:space="preserve">
+    <value>#TODO#_Ajouter un utilisateur</value>
+  </data>
+  <data name="ANewerVersion" xml:space="preserve">
+    <value>#TODO#_Version plus récente</value>
+  </data>
+  <data name="ApplicantDetails" xml:space="preserve">
+    <value>#TODO#_Détails concernant le candidat</value>
+  </data>
+  <data name="ApplicationDate" xml:space="preserve">
+    <value>#TODO#_Date de demande</value>
+  </data>
+  <data name="ApplicationDetails" xml:space="preserve">
+    <value>#TODO#_Détails de la candidature</value>
+  </data>
+  <data name="ApplicationNo" xml:space="preserve">
+    <value>#TODO#_N° de la demande :</value>
+  </data>
+  <data name="ApplicationsList" xml:space="preserve">
+    <value>#TODO#_Liste des Applications</value>
+  </data>
+  <data name="ApplicationsListMsg" xml:space="preserve">
+    <value>#TODO#_Cliquez sur une application pour afficher ses données. Naviguez dans la barre de menu de gauche.!</value>
+  </data>
+  <data name="ApplicationType" xml:space="preserve">
+    <value>#TODO#_Type d'application</value>
+  </data>
+  <data name="AppNo" xml:space="preserve">
+    <value>#TODO#_App. Non.!</value>
+  </data>
+  <data name="AppType" xml:space="preserve">
+    <value>#TODO#_Type d'application</value>
+  </data>
+  <data name="attentionOf" xml:space="preserve">
+    <value>#TODO#_A l’attention de :</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>#TODO#_Précédent</value>
+  </data>
+  <data name="BackSidePreview" xml:space="preserve">
+    <value>#TODO#_Aperçu au verso!</value>
+  </data>
+  <data name="BarcodeDetails" xml:space="preserve">
+    <value>#TODO#_Détails du code-barres!</value>
+  </data>
+  <data name="Biometrics" xml:space="preserve">
+    <value>#TODO#_Biométrie</value>
+  </data>
+  <data name="Block" xml:space="preserve">
+    <value>#TODO#_Bloc</value>
+  </data>
+  <data name="Both" xml:space="preserve">
+    <value>#TODO#_Les deux</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>#TODO#_Annuler</value>
+  </data>
+  <data name="Capture" xml:space="preserve">
+    <value>#TODO#_Capturer</value>
+  </data>
+  <data name="CaptureCollectorSign" xml:space="preserve">
+    <value>#TODO#_Capturez la signature du collectionneur!</value>
+  </data>
+  <data name="CapturingMethod" xml:space="preserve">
+    <value>#TODO#_Méthode de capture!</value>
+  </data>
+  <data name="CardPreview" xml:space="preserve">
+    <value>#TODO#_Aperçu de la carte</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>#TODO#_Modifier le mot de passe</value>
+  </data>
+  <data name="CheckFingerprint" xml:space="preserve">
+    <value>#TODO#_Vérifiez l&amp;#39;empreinte digitale!</value>
+  </data>
+  <data name="CheckPhoto" xml:space="preserve">
+    <value>#TODO#_Vérifiez la photo!</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>#TODO#_EFFACEMENT</value>
+  </data>
+  <data name="ClearPicture" xml:space="preserve">
+    <value>#TODO#_Image claire!</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>#TODO#_CODE</value>
+  </data>
+  <data name="CollectedSuccessfully" xml:space="preserve">
+    <value>#TODO#_Recueilli avec succès!</value>
+  </data>
+  <data name="CollectionDate" xml:space="preserve">
+    <value>#TODO#_Cashable date</value>
+  </data>
+  <data name="CollectionResult" xml:space="preserve">
+    <value>#TODO#_Résultat collecte</value>
+  </data>
+  <data name="CollectorDetails" xml:space="preserve">
+    <value>#TODO#_Détails du collectionneur!</value>
+  </data>
+  <data name="CollectorIsApplicant" xml:space="preserve">
+    <value>#TODO#_Le collectionneur est demandeur!</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>#TODO#_Commentaires</value>
+  </data>
+  <data name="CommentsHeader" xml:space="preserve">
+    <value>#TODO#_Cliquez sur le commentaire non lu pour le marquer comme lu!</value>
+  </data>
+  <data name="CommentText" xml:space="preserve">
+    <value>#TODO#_Texte de commentaire</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>#TODO#_Confirmer le mot de passe</value>
+  </data>
+  <data name="CountryRepublic" xml:space="preserve">
+    <value>#TODO#_République d'Angola</value>
+  </data>
+  <data name="CurrentLicneseDetails" xml:space="preserve">
+    <value>#TODO#_Détails de la licence actuelle!</value>
+  </data>
+  <data name="CurrentPersonalDetails" xml:space="preserve">
+    <value>#TODO#_Détails personnels actuels!</value>
+  </data>
+  <data name="CurrentStatus" xml:space="preserve">
+    <value>#TODO#_État actuel</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>#TODO#_Date :</value>
+  </data>
+  <data name="DateOfBirth" xml:space="preserve">
+    <value>#TODO#_Date de naissance</value>
+  </data>
+  <data name="DBDetails" xml:space="preserve">
+    <value>#TODO#_Détails DB!</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>#TODO#_&amp;Supprimer...</value>
+  </data>
+  <data name="DenyApp" xml:space="preserve">
+    <value>#TODO#_Refuser</value>
+  </data>
+  <data name="DenyReason" xml:space="preserve">
+    <value>#TODO#_Refuser le motif</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>#TODO#_Description :</value>
+  </data>
+  <data name="Dob" xml:space="preserve">
+    <value>#TODO#_DOB</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>#TODO#_&amp;Télécharger</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>#TODO#_Téléchargement</value>
+  </data>
+  <data name="Duplex" xml:space="preserve">
+    <value>#TODO#_Recto verso :</value>
+  </data>
+  <data name="Edited" xml:space="preserve">
+    <value>#TODO#_Modifié</value>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>#TODO#_Entrer le mot de passe</value>
+  </data>
+  <data name="EnterSerialNoAndCollectorDetails" xml:space="preserve">
+    <value>#TODO#_Entrez le numéro de série et les détails du collecteur avant d&amp;#39;imprimer le permis de conduire temporaire!</value>
+  </data>
+  <data name="EnterSerialNumber" xml:space="preserve">
+    <value>#TODO#_Entrer le numéro de série</value>
+  </data>
+  <data name="ERR_IntrefRequired" xml:space="preserve">
+    <value>#TODO#_Intref requis!</value>
+  </data>
+  <data name="ERR_Not_Valid_Age" xml:space="preserve">
+    <value>#TODO#_La date de naissance n&amp;#39;est pas compatible avec le type de licence!</value>
+  </data>
+  <data name="ERR_Required" xml:space="preserve">
+    <value>#TODO#_Ce champ est obligatoire.</value>
+  </data>
+  <data name="ERR_RoleAssignedToUser" xml:space="preserve">
+    <value>#TODO#_Ce rôle ne peut pas être supprimé car il est affecté à un menu!</value>
+  </data>
+  <data name="ERR_SupDocToAppTypeAssignedToUser" xml:space="preserve">
+    <value>#TODO#_est déjà utilisé</value>
+  </data>
+  <data name="ExactNames" xml:space="preserve">
+    <value>#TODO#_Noms exacts!</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>#TODO#_Quitter</value>
+  </data>
+  <data name="ExpiryDate" xml:space="preserve">
+    <value>#TODO#_Date d'expiration</value>
+  </data>
+  <data name="Feeder" xml:space="preserve">
+    <value>#TODO#_Chargeur</value>
+  </data>
+  <data name="FieldToCompare" xml:space="preserve">
+    <value>#TODO#_Champ à comparer :</value>
+  </data>
+  <data name="FingerprintRightThumb" xml:space="preserve">
+    <value>#TODO#_Empreinte digitale (pouce droit)!</value>
+  </data>
+  <data name="FirstIssueDate" xml:space="preserve">
+    <value>#TODO#_Première date d&amp;#39;émission!</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>#TODO#_Prénom</value>
+  </data>
+  <data name="FromPaperScanner" xml:space="preserve">
+    <value>#TODO#_Du papier, en utilisant un scanner de papier!</value>
+  </data>
+  <data name="FromScreen" xml:space="preserve">
+    <value>#TODO#_Écran</value>
+  </data>
+  <data name="FrontSidePreview" xml:space="preserve">
+    <value>#TODO#_Aperçu avant!</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>#TODO#_Hauteur (cm)!</value>
+  </data>
+  <data name="HomeAffairs" xml:space="preserve">
+    <value>#TODO#_MINISTERE DE L’INTERIEUR</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>#TODO#_ID</value>
+  </data>
+  <data name="IdDocType" xml:space="preserve">
+    <value>#TODO#_Type de document d'identité</value>
+  </data>
+  <data name="IdDocumentType" xml:space="preserve">
+    <value>#TODO#_Type de document d'identité</value>
+  </data>
+  <data name="IDNo" xml:space="preserve">
+    <value>#TODO#_Numéro d'identificateur :</value>
+  </data>
+  <data name="IDNum" xml:space="preserve">
+    <value>#TODO#_Numéro d'identification</value>
+  </data>
+  <data name="IDNumber" xml:space="preserve">
+    <value>#TODO#_Numéro d'identification</value>
+  </data>
+  <data name="Intref" xml:space="preserve">
+    <value>#TODO#_INTREF!</value>
+  </data>
+  <data name="IntrefClipboard" xml:space="preserve">
+    <value>#TODO#_Copiez le numéro INTREF dans le presse-papiers!</value>
+  </data>
+  <data name="IntrefNo" xml:space="preserve">
+    <value>#TODO#_INTREF Non!</value>
+  </data>
+  <data name="IsEditable" xml:space="preserve">
+    <value>#TODO#_Modifiable</value>
+  </data>
+  <data name="IsMandatory" xml:space="preserve">
+    <value>#TODO#_est obligatoire</value>
+  </data>
+  <data name="IssueDate" xml:space="preserve">
+    <value>#TODO#_Date d'émission</value>
+  </data>
+  <data name="IssuedTempLicenseDetails" xml:space="preserve">
+    <value>#TODO#_Délivré Temp. Détails de la licence!</value>
+  </data>
+  <data name="IssuingCentre" xml:space="preserve">
+    <value>#TODO#_Centre d&amp;#39;émission!</value>
+  </data>
+  <data name="LastUpdate" xml:space="preserve">
+    <value>#TODO#_Dernière mise à jour</value>
+  </data>
+  <data name="LastUpdateDate" xml:space="preserve">
+    <value>#TODO#_Date dernière mise à jour</value>
+  </data>
+  <data name="LastUpdateUser" xml:space="preserve">
+    <value>#TODO#_Dernière mise à jour</value>
+  </data>
+  <data name="LicenceDetails" xml:space="preserve">
+    <value>#TODO#_Détails de la licence</value>
+  </data>
+  <data name="LicenceType" xml:space="preserve">
+    <value>#TODO#_Type de permis de conduire</value>
+  </data>
+  <data name="LicenceTypes" xml:space="preserve">
+    <value>#TODO#_Types de licences</value>
+  </data>
+  <data name="LicenseCardSerialNo" xml:space="preserve">
+    <value>#TODO#_Numéro de série de la carte de licence!</value>
+  </data>
+  <data name="LicenseNo" xml:space="preserve">
+    <value>#TODO#_Numéro de licence.</value>
+  </data>
+  <data name="Licnese" xml:space="preserve">
+    <value>#TODO#_Licnece!</value>
+  </data>
+  <data name="LiveImages" xml:space="preserve">
+    <value>#TODO#_IMAGES EN DIRECT</value>
+  </data>
+  <data name="Locations" xml:space="preserve">
+    <value>#TODO#_Emplacements</value>
+  </data>
+  <data name="Log" xml:space="preserve">
+    <value>#TODO#_Log</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>#TODO#_&amp;Connexion</value>
+  </data>
+  <data name="MainMenu" xml:space="preserve">
+    <value>#TODO#_Menu principal</value>
+  </data>
+  <data name="MainWindowTitle" xml:space="preserve">
+    <value>#TODO#_SYSTÈME DE IDENTITE</value>
+  </data>
+  <data name="Mandatory" xml:space="preserve">
+    <value>#TODO#_obligatoire</value>
+  </data>
+  <data name="Match" xml:space="preserve">
+    <value>#TODO#_EQUIV</value>
+  </data>
+  <data name="MessageHeader" xml:space="preserve">
+    <value>#TODO#_TODO</value>
+  </data>
+  <data name="Module" xml:space="preserve">
+    <value>#TODO#_Module</value>
+  </data>
+  <data name="Nationality" xml:space="preserve">
+    <value>#TODO#_Nationalité</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>#TODO#_&amp;Nouveau mot de passe :</value>
+  </data>
+  <data name="NextAction" xml:space="preserve">
+    <value>#TODO#_Action suivante</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>#TODO#_Page suivante</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>#TODO#_Non</value>
+  </data>
+  <data name="NoLicenseExistMsg" xml:space="preserve">
+    <value>#TODO#_Aucune licence temporaire n&amp;#39;existe!</value>
+  </data>
+  <data name="NotPermitted" xml:space="preserve">
+    <value>#TODO#_Non autorisé</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>#TODO#_OK</value>
+  </data>
+  <data name="OldLicenceAttached" xml:space="preserve">
+    <value>#TODO#_Ancienne licence attachée!</value>
+  </data>
+  <data name="Operation" xml:space="preserve">
+    <value>#TODO#_Opération</value>
+  </data>
+  <data name="OtherNames" xml:space="preserve">
+    <value>#TODO#_Autre(s) nom(s):</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>#TODO#_Remplacer</value>
+  </data>
+  <data name="ParticularsofOldDrivingLicence" xml:space="preserve">
+    <value>#TODO#_Détails de l&amp;#39;ancien permis de conduire!</value>
+  </data>
+  <data name="PassportNo" xml:space="preserve">
+    <value>#TODO#_N° de passeport</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>#TODO#_Modifier mot de passe</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>#TODO#_Mot de passe requis</value>
+  </data>
+  <data name="Permitted" xml:space="preserve">
+    <value>#TODO#_Autorisés</value>
+  </data>
+  <data name="PersonalDetails" xml:space="preserve">
+    <value>#TODO#_Détails personnels</value>
+  </data>
+  <data name="PersonalRestriction" xml:space="preserve">
+    <value>#TODO#_Restriction personnelle!</value>
+  </data>
+  <data name="PesonalDetails" xml:space="preserve">
+    <value>#TODO#_Détails Pesonal!</value>
+  </data>
+  <data name="Photo" xml:space="preserve">
+    <value>#TODO#_Photo</value>
+  </data>
+  <data name="PhotoSignature" xml:space="preserve">
+    <value>#TODO#_Photo / Signature!</value>
+  </data>
+  <data name="PhysicalAddress" xml:space="preserve">
+    <value>#TODO#_Adresse physique</value>
+  </data>
+  <data name="Platen" xml:space="preserve">
+    <value>#TODO#_Platen</value>
+  </data>
+  <data name="PostalAddress" xml:space="preserve">
+    <value>#TODO#_Adresse postale (si différente)!</value>
+  </data>
+  <data name="PostingDate" xml:space="preserve">
+    <value>#TODO#_Date de validation</value>
+  </data>
+  <data name="PrevPage" xml:space="preserve">
+    <value>#TODO#_Page préc.</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>#TODO#_Imprimer |</value>
+  </data>
+  <data name="PrintTempLicense" xml:space="preserve">
+    <value>#TODO#_Temp. Licence!</value>
+  </data>
+  <data name="Provided" xml:space="preserve">
+    <value>#TODO#_Fourni</value>
+  </data>
+  <data name="QAPassedSuccess" xml:space="preserve">
+    <value>#TODO#_QA passé avec succès!</value>
+  </data>
+  <data name="QAResult" xml:space="preserve">
+    <value>#TODO#_Résultats AQ</value>
+  </data>
+  <data name="Read" xml:space="preserve">
+    <value>#TODO#_Lire</value>
+  </data>
+  <data name="Recapture" xml:space="preserve">
+    <value>#TODO#_Capturer à nouveau</value>
+  </data>
+  <data name="RegDate" xml:space="preserve">
+    <value>#TODO#_Date d'enreg.</value>
+  </data>
+  <data name="RegistrationDate" xml:space="preserve">
+    <value>#TODO#_Date d'inscription</value>
+  </data>
+  <data name="RelationshipWithApplicant" xml:space="preserve">
+    <value>#TODO#_Relation avec le demandeur!</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>#TODO#_Remarques :</value>
+  </data>
+  <data name="Reprint" xml:space="preserve">
+    <value>#TODO#_Réimprimer</value>
+  </data>
+  <data name="RequestedSerrvise" xml:space="preserve">
+    <value>#TODO#_Demanda Serrvise!</value>
+  </data>
+  <data name="Retrieve" xml:space="preserve">
+    <value>#TODO#_récupérer</value>
+  </data>
+  <data name="RevertToBiometr" xml:space="preserve">
+    <value>#TODO#_QA Passed Biometrics!</value>
+  </data>
+  <data name="RevertToBiometrics" xml:space="preserve">
+    <value>#TODO#_Revenez à la biométrie!</value>
+  </data>
+  <data name="RevertToVerification" xml:space="preserve">
+    <value>#TODO#_Revenez à la vérification!</value>
+  </data>
+  <data name="RevertToVeriic" xml:space="preserve">
+    <value>#TODO#_Revenez à la vérification!</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>#TODO#_Rôle</value>
+  </data>
+  <data name="RoleName" xml:space="preserve">
+    <value>#TODO#_Nom du rôle</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>#TODO#_Rôles</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>#TODO#_Enregistrer</value>
+  </data>
+  <data name="Scan" xml:space="preserve">
+    <value>#TODO#_Analyse</value>
+  </data>
+  <data name="ScanApp" xml:space="preserve">
+    <value>#TODO#_Analyse&amp;#x0D;</value>
+  </data>
+  <data name="ScanFrom" xml:space="preserve">
+    <value>#TODO#_Analyse&amp;#x0D;</value>
+  </data>
+  <data name="ScanningMethod" xml:space="preserve">
+    <value>#TODO#_Méthode de scannage</value>
+  </data>
+  <data name="ScanningOptions" xml:space="preserve">
+    <value>#TODO#_Scanning options.</value>
+  </data>
+  <data name="ScanSupDoc" xml:space="preserve">
+    <value>#TODO#_Pièces justificatives</value>
+  </data>
+  <data name="ScanUsingFeeder" xml:space="preserve">
+    <value>#TODO#_Numériser à l&amp;#39;aide du chargeur!</value>
+  </data>
+  <data name="SelectDevice" xml:space="preserve">
+    <value>#TODO#_Sélectionner un appareil</value>
+  </data>
+  <data name="SerialNo" xml:space="preserve">
+    <value>#TODO#_N° de série :</value>
+  </data>
+  <data name="Sex" xml:space="preserve">
+    <value>#TODO#_Sexe</value>
+  </data>
+  <data name="ShortDateFormat" xml:space="preserve">
+    <value>#TODO#_JJ/MM/AAAA</value>
+  </data>
+  <data name="ShortDateFormatWithTime" xml:space="preserve">
+    <value>#TODO#_jj/MM/aaaa HH:mm:ss</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>#TODO#_Signature</value>
+  </data>
+  <data name="SignatureTake" xml:space="preserve">
+    <value>#TODO#_Signature</value>
+  </data>
+  <data name="SrialNo" xml:space="preserve">
+    <value>#TODO#_N° de série :</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>#TODO#_Début</value>
+  </data>
+  <data name="StartCamera" xml:space="preserve">
+    <value>#TODO#_Démarrez la caméra!</value>
+  </data>
+  <data name="StartSignature" xml:space="preserve">
+    <value>#TODO#_Démarrez Signature!</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>#TODO#_État</value>
+  </data>
+  <data name="SupervisorApprovalForComment" xml:space="preserve">
+    <value>#TODO#_Approbation du Superviseur</value>
+  </data>
+  <data name="SupportingDocument" xml:space="preserve">
+    <value>#TODO#_Document à l’appui 1</value>
+  </data>
+  <data name="SupportingDocuments" xml:space="preserve">
+    <value>#TODO#_Prise en charge de documents.</value>
+  </data>
+  <data name="Surename" xml:space="preserve">
+    <value>#TODO#_Nom</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>#TODO#_Nom</value>
+  </data>
+  <data name="Suspended" xml:space="preserve">
+    <value>#TODO#_Suspendu</value>
+  </data>
+  <data name="SuspendedUntil" xml:space="preserve">
+    <value>#TODO#_Suspendu jusqu&amp;#39;au!</value>
+  </data>
+  <data name="Telephone" xml:space="preserve">
+    <value>#TODO#_Téléphone</value>
+  </data>
+  <data name="TempLicenseMsg" xml:space="preserve">
+    <value>#TODO#_Cliquez sur un numéro de série pour voir les détails de son collecteur ci-dessous!</value>
+  </data>
+  <data name="TemporaryLicnese" xml:space="preserve">
+    <value>#TODO#_Licnese temporaire!</value>
+  </data>
+  <data name="ToScreen" xml:space="preserve">
+    <value>#TODO#_masquer</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>#TODO#_Nom du dictionnaire :</value>
+  </data>
+  <data name="UpdateUser" xml:space="preserve">
+    <value>#TODO#_Mettre à jour l'utilisateur</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>#TODO#_Utilisateur</value>
+  </data>
+  <data name="UserDetails" xml:space="preserve">
+    <value>#TODO#_Détails utilisateur</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>#TODO#_Nom d’utilisateur :</value>
+  </data>
+  <data name="ValidityPeriod" xml:space="preserve">
+    <value>#TODO#_Période de validité</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>#TODO#_#VALEUR!</value>
+  </data>
+  <data name="VehicleRestriction" xml:space="preserve">
+    <value>#TODO#_Restriction de véhicule!</value>
+  </data>
+  <data name="VehicleRestrictions" xml:space="preserve">
+    <value>#TODO#_Restriction (s) concernant le véhicule!</value>
+  </data>
+  <data name="VerifyPhoto" xml:space="preserve">
+    <value>#TODO#_Vérifiez la photo!</value>
+  </data>
+  <data name="Waive" xml:space="preserve">
+    <value>#TODO#_Exonérer</value>
+  </data>
+  <data name="Waived" xml:space="preserve">
+    <value>#TODO#_Offert</value>
+  </data>
+  <data name="WrittenBy" xml:space="preserve">
+    <value>#TODO#_Écrit par</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>#TODO#_Oui</value>
+  </data>
+  <data name="ZoomIn" xml:space="preserve">
+    <value>#TODO#_Zoom avant</value>
+  </data>
+  <data name="ZoomOut" xml:space="preserve">
+    <value>#TODO#_Zoom arrière</value>
+  </data>
+  <data name="EditExistingUser" xml:space="preserve">
+    <value>#TODO#_Modifier un utilisateur existant</value>
+  </data>
+  <data name="DictType" xml:space="preserve">
+    <value>#TODO#_Type de dictionnaire!</value>
+  </data>
+  <data name="MSG_ReloginRequired" xml:space="preserve">
+    <value>#TODO#_Veuillez vous reconnecter!</value>
+  </data>
+  <data name="MSG_CaptureCollectorSign" xml:space="preserve">
+    <value>#TODO#_#TODO#_Capturez la signature du collectionneur!</value>
+  </data>
+  <data name="MSG_FixValidationErrorsFirst" xml:space="preserve">
+    <value>#TODO#_Corrigez les erreurs de validation.</value>
+  </data>
+  <data name="MSG_ChangesWillBeDiscarded" xml:space="preserve">
+    <value>#TODO#_Les modifications seront ignorées. Êtes-vous sûr?!</value>
+  </data>
+  <data name="MSG_AreYouSureYouWantToExit" xml:space="preserve">
+    <value>#TODO#_Voulez-vous vraiment quitter ?</value>
+  </data>
+  <data name="MSG_NoDataFoundInCRS" xml:space="preserve">
+    <value>#TODO#_Aucune donnée trouvée dans l&amp;#39;enregistrement de la population concernant ce numéro d&amp;#39;identification.Si la carte d&amp;#39;identité était ...!</value>
+  </data>
+  <data name="MSG_SaveSuccessfully" xml:space="preserve">
+    <value>#TODO#_Les modifications ont été enregistrées</value>
+  </data>
+  <data name="MSG_PersonExists" xml:space="preserve">
+    <value>#TODO#_La personne existe dans la base de données. L&amp;#39;émission d&amp;#39;une nouvelle licence pour cette personne n&amp;#39;est pas autorisée.!</value>
+  </data>
+  <data name="MSG_OpenApplicationFound" xml:space="preserve">
+    <value>#TODO#_Des applications ouvertes ont été trouvées avec cet Intref!</value>
+  </data>
+  <data name="MSG_GenericInterfaceCRSError" xml:space="preserve">
+    <value>#TODO#_Erreur de connexion à la base de données CRS!</value>
+  </data>
+  <data name="MSG_SupportingDocumentsScanIsRequired" xml:space="preserve">
+    <value>#TODO#_La numérisation des documents justificatifs est requise.!</value>
+  </data>
+  <data name="MSG_ValueExists" xml:space="preserve">
+    <value>#TODO#_La valeur existe déjà</value>
+  </data>
+  <data name="MSG_PersonDeceased" xml:space="preserve">
+    <value>#TODO#_La personne apparaît comme décédée dans CRS!</value>
+  </data>
+  <data name="MSG_NoCollectedId" xml:space="preserve">
+    <value>#TODO#_Aucune carte d&amp;#39;identité collectée enregistrée pour ce demandeur dans CRS!</value>
+  </data>
+  <data name="MSG_FailedWhileSaving" xml:space="preserve">
+    <value>#TODO#_Échec lors de l&amp;#39;enregistrement. Contactez l&amp;#39;administrateur.!</value>
+  </data>
+  <data name="MSG_PasswordChanedSuccessRedirectToMenu" xml:space="preserve">
+    <value>#TODO#_Réussite du mot de passe réussi Rediriger vers le menu!</value>
+  </data>
+  <data name="MSG_AreYouSureYouWantToChangeLang" xml:space="preserve">
+    <value>#TODO#_Changer de langue rechargera le système. Êtes-vous sûr?!</value>
+  </data>
+  <data name="MSG_HandleChanges" xml:space="preserve">
+    <value>#TODO#_Modifications trouvées, appuyez sur OUI pour les enregistrer ou sur Non pour les supprimer!</value>
+  </data>
+  <data name="MenuAdmin" xml:space="preserve">
+    <value>#TODO#_Administration</value>
+  </data>
+  <data name="MenuSettings" xml:space="preserve">
+    <value>#TODO#_Paramètres</value>
+  </data>
+  <data name="MenuCardDistribution" xml:space="preserve">
+    <value>#TODO#_Distribution de cartes!</value>
+  </data>
+  <data name="MenuCardInfo" xml:space="preserve">
+    <value>#TODO#_Info sur la carte</value>
+  </data>
+  <data name="MenuCollection" xml:space="preserve">
+    <value>#TODO#_Collection</value>
+  </data>
+  <data name="MenuDemographicData" xml:space="preserve">
+    <value>#TODO#_Données démographiques</value>
+  </data>
+  <data name="MenuEmployment" xml:space="preserve">
+    <value>#TODO#_Emploi</value>
+  </data>
+  <data name="MenuEnrollement" xml:space="preserve">
+    <value>#TODO#_Inscription!</value>
+  </data>
+  <data name="MenuFingerprint" xml:space="preserve">
+    <value>#TODO#_Empreintes...</value>
+  </data>
+  <data name="MenuGoverment" xml:space="preserve">
+    <value>#TODO#_Gouvernement</value>
+  </data>
+  <data name="MenuImages" xml:space="preserve">
+    <value>#TODO#_Images</value>
+  </data>
+  <data name="MenuPermissions" xml:space="preserve">
+    <value>#TODO#_Autorisations d'accès</value>
+  </data>
+  <data name="MenuRegistration" xml:space="preserve">
+    <value>#TODO#_Inscription</value>
+  </data>
+  <data name="MenuReplacement" xml:space="preserve">
+    <value>#TODO#_Replacement</value>
+  </data>
+  <data name="MenuRole" xml:space="preserve">
+    <value>#TODO#_#TODO#_Rôle</value>
+  </data>
+  <data name="MenuSystemSettings" xml:space="preserve">
+    <value>#TODO#_Paramètres système</value>
+  </data>
+  <data name="MenuUser" xml:space="preserve">
+    <value>#TODO#_#TODO#_Utilisateur</value>
+  </data>
+  <data name="MenuUserManagement" xml:space="preserve">
+    <value>#TODO#_Gestion des utilisateurs</value>
+  </data>
+  <data name="MenuUtilities" xml:space="preserve">
+    <value>#TODO#_Services publics</value>
+  </data>
+  <data name="MenuVerification" xml:space="preserve">
+    <value>#TODO#_Vérification</value>
+  </data>
+  <data name="Fe" xml:space="preserve">
+    <value>#TODO#_Féminin</value>
+  </data>
+  <data name="Ma" xml:space="preserve">
+    <value>#TODO#_Masculin</value>
+  </data>
+  <data name="Un" xml:space="preserve">
+    <value>#TODO#_&lt;Inconnu&gt;</value>
+  </data>
+  <data name="ActiveCode" xml:space="preserve">
+    <value>#TODO#_#TODO#_Actif</value>
+  </data>
+  <data name="PassiveCode" xml:space="preserve">
+    <value>#TODO#_Passif</value>
+  </data>
+  <data name="ERR_PasswordRequired" xml:space="preserve">
+    <value>#TODO#_Mot de passe requis</value>
+  </data>
+  <data name="ERR_NewPassOldPassMustBeDifferent" xml:space="preserve">
+    <value>#TODO#_Le mot de passe doit être différent de votre mot de passe actuel!</value>
+  </data>
+  <data name="ERR_ConfirmPasswordIsInCorrect" xml:space="preserve">
+    <value>#TODO#_Le mot de passe de confirmation est incorrect !!</value>
+  </data>
+  <data name="ERR_UsernameInUse" xml:space="preserve">
+    <value>#TODO#_Le nom d'utilisateur est déjà utilisé</value>
+  </data>
+  <data name="MSG_PleaseLogout" xml:space="preserve">
+    <value>#TODO#_Pour que les modifications prennent effet, une nouvelle connexion est nécessaire.!</value>
+  </data>
+  <data name="MSG_SystemAlreadyOpenOnThisPc" xml:space="preserve">
+    <value>#TODO#_Système déjà ouvert sur cet ordinateur!</value>
+  </data>
+  <data name="MSG_PasswordRequired" xml:space="preserve">
+    <value>#TODO#_Le mot de passe doit contenir au moins 4 caractères avec au moins un chiffre, une majuscule et une minuscule!</value>
+  </data>
+  <data name="ERR_RoleNameUnique" xml:space="preserve">
+    <value>#TODO#_Le nom doit être unique</value>
+  </data>
+  <data name="ERR_StringLengthMinMax" xml:space="preserve">
+    <value>#TODO#_La longueur de ce champ doit être comprise entre {0} et {1}!</value>
+  </data>
+  <data name="ERR_StringLength" xml:space="preserve">
+    <value>#TODO#_La longueur de ce champ doit être {0}!</value>
+  </data>
+  <data name="ERR_UniqueRoleName" xml:space="preserve">
+    <value>#TODO#_Le nom du rôle doit être uniqe!</value>
+  </data>
+  <data name="BTN_Cancel" xml:space="preserve">
+    <value>#TODO#_#TODO#_Annuler</value>
+  </data>
+  <data name="BTN_Ok" xml:space="preserve">
+    <value>#TODO#_OK</value>
+  </data>
+  <data name="BTN_Yes" xml:space="preserve">
+    <value>#TODO#_#TODO#_Oui</value>
+  </data>
+  <data name="BTN_No" xml:space="preserve">
+    <value>#TODO#_#TODO#_Non</value>
+  </data>
+  <data name="BTN_ClearData" xml:space="preserve">
+    <value>#TODO#_Effacer les données</value>
+  </data>
+  <data name="BTN_Relogin" xml:space="preserve">
+    <value>#TODO#_Reconnexion</value>
+  </data>
+  <data name="MSG_ErorDbConnection" xml:space="preserve">
+    <value>#TODO#_Erreur lors de la connexion à la base de données, veuillez contacter l&amp;#39;administrateur système!</value>
+  </data>
+  <data name="MSG_ErrorRequestTimeOut" xml:space="preserve">
+    <value>#TODO#_Erreur de connexion au serveur, veuillez réessayer ou contacter l&amp;#39;administrateur système!</value>
+  </data>
+  <data name="MSG_ServerConnectionDead" xml:space="preserve">
+    <value>#TODO#_La communication avec le serveur a expiré, veuillez redémarrer l&amp;#39;application.!</value>
+  </data>
+  <data name="MSG_UnexpectedError" xml:space="preserve">
+    <value>#TODO#_Un événement inattendu s&amp;#39;est produit. Contactez l&amp;#39;administrateur système!</value>
+  </data>
+  <data name="MSG_NetworkError" xml:space="preserve">
+    <value>#TODO#_Erreur réseau, contactez l&amp;#39;administrateur système!</value>
+  </data>
+  <data name="UpdateVersionWindowTitle" xml:space="preserve">
+    <value>#TODO#_Mettre à jour l'application</value>
+  </data>
+  <data name="ERR_ConfirmPasswordAndNewPasswordnotMatch" xml:space="preserve">
+    <value>#TODO#_Les mots de passe ne correspondent pas.</value>
+  </data>
+  <data name="ERR_PasswordSecureValidation" xml:space="preserve">
+    <value>#TODO#_Le mot de passe doit être composé d&amp;#39;au moins une majuscule, des chiffres et ..!</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>#TODO#_Langue :</value>
+  </data>
+  <data name="BlackList" xml:space="preserve">
+    <value>#TODO#_Liste noire</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>#TODO#_Administrateur</value>
+  </data>
+  <data name="Identification" xml:space="preserve">
+    <value>#TODO#_Identification</value>
+  </data>
+  <data name="MenuBlackList" xml:space="preserve">
+    <value>#TODO#_#TODO#_Liste noire</value>
+  </data>
+  <data name="MenuDataEntry" xml:space="preserve">
+    <value>#TODO#_Entrée de données</value>
+  </data>
+  <data name="MenuEnquiry" xml:space="preserve">
+    <value>#TODO#_DEMANDE</value>
+  </data>
+  <data name="MenuDataEntryScreen" xml:space="preserve">
+    <value>#TODO#_Entrée de données</value>
+  </data>
+  <data name="MenuDecisionMakingScreen" xml:space="preserve">
+    <value>#TODO#_Prise de décision</value>
+  </data>
+  <data name="MenuEnquiryScreen" xml:space="preserve">
+    <value>#TODO#_DEMANDE</value>
+  </data>
+  <data name="MenuDecisionMaking" xml:space="preserve">
+    <value>#TODO#_#TODO#_Prise de décision</value>
+  </data>
+  <data name="IDType" xml:space="preserve">
+    <value>#TODO#_Type d'ID</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>#TODO#_Pays</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>#TODO#_Nom</value>
+  </data>
+  <data name="ActionRequired" xml:space="preserve">
+    <value>#TODO#_Action requise</value>
+  </data>
+  <data name="Attachements" xml:space="preserve">
+    <value>#TODO#_Pièces Jointes</value>
+  </data>
+  <data name="BirthDate" xml:space="preserve">
+    <value>#TODO#_Date de naissance</value>
+  </data>
+  <data name="BlackListRecordNo" xml:space="preserve">
+    <value>#TODO#_Enregistrement sur la liste noire Non!</value>
+  </data>
+  <data name="BlockType" xml:space="preserve">
+    <value>#TODO#_Type de bloc</value>
+  </data>
+  <data name="CreatedFrom" xml:space="preserve">
+    <value>#TODO#_Créé à partir de</value>
+  </data>
+  <data name="DetailsOfInterdiction" xml:space="preserve">
+    <value>#TODO#_Détails de l&amp;#39;interdiction!</value>
+  </data>
+  <data name="FirstName1" xml:space="preserve">
+    <value>#TODO#_Prénom 1</value>
+  </data>
+  <data name="FirstName2" xml:space="preserve">
+    <value>#TODO#_Prénom 2</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>#TODO#_Gendre</value>
+  </data>
+  <data name="Institution" xml:space="preserve">
+    <value>#TODO#_Etablissement</value>
+  </data>
+  <data name="InternalFileNo" xml:space="preserve">
+    <value>#TODO#_Numéro de dossier interne!</value>
+  </data>
+  <data name="LastName1" xml:space="preserve">
+    <value>#TODO#_Nom</value>
+  </data>
+  <data name="LastName2" xml:space="preserve">
+    <value>#TODO#_Nom 2 :</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>#TODO#_Nouveau</value>
+  </data>
+  <data name="NoAttachmentsFound" xml:space="preserve">
+    <value>#TODO#_Aucune pièce jointe trouvée!</value>
+  </data>
+  <data name="PersonalData" xml:space="preserve">
+    <value>#TODO#_Données personnelles</value>
+  </data>
+  <data name="ProcessingSteps" xml:space="preserve">
+    <value>#TODO#_Les étapes du traitement</value>
+  </data>
+  <data name="RequestData" xml:space="preserve">
+    <value>#TODO#_Données de la demande</value>
+  </data>
+  <data name="RequestNo" xml:space="preserve">
+    <value>#TODO#_Nº de demande</value>
+  </data>
+  <data name="RequestStatus" xml:space="preserve">
+    <value>#TODO#_Statut de la demande</value>
+  </data>
+  <data name="RequestType" xml:space="preserve">
+    <value>#TODO#_Type de la demande :</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>#TODO#_Rechercher</value>
+  </data>
+  <data name="SearchParameters" xml:space="preserve">
+    <value>#TODO#_Paramètres de recherche</value>
+  </data>
+  <data name="SearchResults" xml:space="preserve">
+    <value>#TODO#_Résultats de la recherche</value>
+  </data>
+  <data name="StopType" xml:space="preserve">
+    <value>#TODO#_Type d'arrêt :</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>#TODO#_À</value>
+  </data>
+  <data name="ValidUntil" xml:space="preserve">
+    <value>#TODO#_Valide jusqu'à</value>
+  </data>
+  <data name="ERR_DateFromBeforeDateTo" xml:space="preserve">
+    <value>#TODO#_Le champ « De » doit précéder « À »</value>
+  </data>
+  <data name="FailedSearchNeedTorefineParams" xml:space="preserve">
+    <value>#TODO#_Impossible d&amp;#39;afficher tous les résultats de la recherche, veuillez affiner les paramètres d&amp;#39;entrée!</value>
+  </data>
+  <data name="GivenNames" xml:space="preserve">
+    <value>#TODO#_Prénom(s)</value>
+  </data>
+  <data name="RequestDate" xml:space="preserve">
+    <value>#TODO#_Date de la demande</value>
+  </data>
+  <data name="Partial" xml:space="preserve">
+    <value>#TODO#_Partiel</value>
+  </data>
+  <data name="Reason" xml:space="preserve">
+    <value>#TODO#_Raison :</value>
+  </data>
+  <data name="MSG_NoDataFound" xml:space="preserve">
+    <value>#TODO#_Données introuvables</value>
+  </data>
+  <data name="MSG_SendForApproval" xml:space="preserve">
+    <value>#TODO#_Envoyer pour approbation</value>
+  </data>
+  <data name="Terminate" xml:space="preserve">
+    <value>#TODO#_Terminer</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>#TODO#_Suivant&gt;</value>
+  </data>
+  <data name="Approve" xml:space="preserve">
+    <value>#TODO#_Approuver</value>
+  </data>
+  <data name="Reject" xml:space="preserve">
+    <value>#TODO#_Rejeter</value>
+  </data>
+  <data name="MenuEnquiriesScreen" xml:space="preserve">
+    <value>#TODO#_Requêtes</value>
+  </data>
+  <data name="MSG_SubmitSuccessfully" xml:space="preserve">
+    <value>#TODO#_Demande soumise avec succès!</value>
+  </data>
+  <data name="MSG_TerminatedSuccessfully" xml:space="preserve">
+    <value>#TODO#_Demande terminée avec succès!</value>
+  </data>
+  <data name="MSG_UpdatedSuccessfully" xml:space="preserve">
+    <value>#TODO#_Demande mise à jour avec succès!</value>
+  </data>
+  <data name="BiometricData" xml:space="preserve">
+    <value>#TODO#_Biometric Data</value>
+  </data>
+  <data name="Enrol" xml:space="preserve">
+    <value>#TODO#_Enrollment</value>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Terminer</value>
+  </data>
+  <data name="Startover" xml:space="preserve">
+    <value>Recommencer</value>
+  </data>
+  <data name="MiddleName" xml:space="preserve">
+    <value>#TODO#_MiddleName</value>
+  </data>
+  <data name="ResetData" xml:space="preserve">
+    <value>#TODO#_Reset Data</value>
+  </data>
+  <data name="SearchPerson" xml:space="preserve">
+    <value>#TODO#_Search Person</value>
+  </data>
+  <data name="NOTIF_AppAlreadySaved" xml:space="preserve">
+    <value>Cette demande a été enregistrée par un autre utilisateur</value>
+  </data>
+  <data name="NOTIF_CheckingFingerprintLicense" xml:space="preserve">
+    <value>Vérification de la licence d'empreinte digitale</value>
+  </data>
+  <data name="NOTIF_EnterSearchParameters" xml:space="preserve">
+    <value>Saisir les paramètres de recherche</value>
+  </data>
+  <data name="NOTIF_FixValidationErrors" xml:space="preserve">
+    <value>Veuillez corriger les erreures de validation</value>
+  </data>
+  <data name="NOTIF_HasOpenApplication" xml:space="preserve">
+    <value>Le demandeur a déjà une demande en cours</value>
+  </data>
+  <data name="NOTIF_NoDataFound" xml:space="preserve">
+    <value>#TODO#_Aucune donnée disponible</value>
+  </data>
+  <data name="NOTIF_SavedSuccessfuly" xml:space="preserve">
+    <value>Enregistré avec succé</value>
+  </data>
+  <data name="NOTIF_SaveYourChanges" xml:space="preserve">
+    <value>Merci d'enregistrer ou d'effacer vos changements</value>
+  </data>
+  <data name="NOTIF_SavingData" xml:space="preserve">
+    <value>Enregistrement des données en cours...</value>
+  </data>
+  <data name="NOTIF_NoPersonFound" xml:space="preserve">
+    <value>Aucune personne trouvée dans le référentiel, entrez les détails du nouveau demandeur</value>
+  </data>
+  <data name="IDNumberError" xml:space="preserve">
+    <value>#TODO#IDNumberError</value>
+  </data>
+  <data name="MSG_IDPasswordFormatError" xml:space="preserve">
+    <value>#TODO#MSG_IDPasswordFormatError</value>
+  </data>
+  <data name="PasswordNumberError" xml:space="preserve">
+    <value>#TODO#PasswordNumberError</value>
+  </data>
+  <data name="MSG_GenderSelectError" xml:space="preserve">
+    <value>#TODO#_GenderSelectError</value>
+  </data>
+  <data name="Enroll" xml:space="preserve">
+    <value>Inscrire</value>
+  </data>
+  <data name="IDNumberError_Duplicate[1]" xml:space="preserve">
+    <value>#TODO#IDNumberError</value>
+  </data>
+  <data name="MSG_IDPasswordFormatError_Duplicate[1]" xml:space="preserve">
+    <value>#TODO#MSG_IDPasswordFormatError</value>
+  </data>
+  <data name="PasswordNumberError_Duplicate[1]" xml:space="preserve">
+    <value>#TODO#PasswordNumberError</value>
+  </data>
+  <data name="MSG_GenderSelectError_Duplicate[1]" xml:space="preserve">
+    <value>#TODO#_GenderSelectError</value>
+  </data>
+  <data name="NOTIF_FileDoesntExist" xml:space="preserve">
+    <value>#TODO#_Il n’existe pas ?</value>
+  </data>
+  <data name="Btn_Back" xml:space="preserve">
+    <value>#TODO#_Précédent</value>
+  </data>
+  <data name="Btn_CuptureAll" xml:space="preserve">
+    <value>#TODO#_Tout casser!</value>
+  </data>
+  <data name="Btn_CuptureMulti" xml:space="preserve">
+    <value>#TODO#_Cupture Multi!</value>
+  </data>
+  <data name="MSG_RegistraionCompleted" xml:space="preserve">
+    <value>#TODO#_L’enregistrement a bien été pris en compte.</value>
+  </data>
+  <data name="MSG_RegistraionWaitInvestigation" xml:space="preserve">
+    <value>#TODO#_L&amp;#39;inscription attend l&amp;#39;enquête!</value>
+  </data>
+  <data name="MSG_RegistraionRejected" xml:space="preserve">
+    <value>#TODO#_L&amp;#39;inscription est rejetée!</value>
+  </data>
+  <data name="SelectFinger" xml:space="preserve">
+    <value>#TODO#_Sélectionnez Finger!</value>
+  </data>
+  <data name="Registration" xml:space="preserve">
+    <value>#TODO#_#TODO#_Inscription</value>
+  </data>
+  <data name="Btn_CaptureAll" xml:space="preserve">
+    <value>#TODO#_Capturez un par un!</value>
+  </data>
+  <data name="Btn_CaptureMulti" xml:space="preserve">
+    <value>#TODO#_capture</value>
+  </data>
+  <data name="BTN_Take" xml:space="preserve">
+    <value>#TODO#_Prendre</value>
+  </data>
+  <data name="BTN_Verify" xml:space="preserve">
+    <value>#TODO#_&amp;Confirmation :</value>
+  </data>
+  <data name="BTN_StopVerify" xml:space="preserve">
+    <value>#TODO#_Vérifier</value>
+  </data>
+  <data name="Verification" xml:space="preserve">
+    <value>#TODO#_#TODO#_Vérification</value>
+  </data>
+  <data name="BTN_Submit" xml:space="preserve">
+    <value>#TODO#_Envoyer</value>
+  </data>
+  <data name="MSG_Terminate" xml:space="preserve">
+    <value>#TODO#_Voulez-vous vraiment mettre fin à la demande?!</value>
+  </data>
+  <data name="ERR_UserIsPassive" xml:space="preserve">
+    <value>#TODO#_votre licence est activée</value>
+  </data>
+  <data name="ERR_UsernameOrPasswordIncorrect" xml:space="preserve">
+    <value>#TODO#_Le nom ou le mot de passe de l'utilisateur n'est pas correct</value>
+  </data>
+  <data name="ERR_NewOldPasswordsMatch" xml:space="preserve">
+    <value>#TODO#_Le nouveau et l&amp;#39;ancien mot de passe devraient être différents!</value>
+  </data>
+  <data name="ERR_MustChangePassword" xml:space="preserve">
+    <value>#TODO#_Mot de passe est requis</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>#TODO#_Accueil</value>
+  </data>
+  <data name="ComputerName" xml:space="preserve">
+    <value>#TODO#_Nom de l'ordinateur</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>#TODO#_Emplacement:</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>#TODO#_Se déconnecter</value>
+  </data>
+  <data name="Site" xml:space="preserve">
+    <value>#TODO#_Site</value>
+  </data>
+</root>

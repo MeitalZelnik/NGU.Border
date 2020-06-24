@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/NGU.Core" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NGU.Core" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:55750/PersonService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" />
+  <xs:complexType name="Person">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" base="q1:ObjectValidationBase">
+        <xs:sequence>
+          <xs:element name="birthDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="createDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="createUserID" type="xs:int" />
+          <xs:element name="firstName" nillable="true" type="xs:string" />
+          <xs:element name="genderID" nillable="true" type="xs:int" />
+          <xs:element name="iD" type="xs:int" />
+          <xs:element name="lastName" nillable="true" type="xs:string" />
+          <xs:element name="middleName" nillable="true" type="xs:string" />
+          <xs:element name="nationalityID" nillable="true" type="xs:int" />
+          <xs:element name="statusID" type="xs:int" />
+          <xs:element name="updateDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="updateUserID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Person" nillable="true" type="tns:Person" />
+  <xs:complexType name="PersonDoc">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" base="q2:ObjectValidationBase">
+        <xs:sequence>
+          <xs:element name="birthDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="createDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="createUserID" type="xs:int" />
+          <xs:element name="expirationDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="firstName" nillable="true" type="xs:string" />
+          <xs:element name="genderID" nillable="true" type="xs:int" />
+          <xs:element name="iD" type="xs:int" />
+          <xs:element name="identityCode" nillable="true" type="xs:string" />
+          <xs:element name="identityCountryID" type="xs:int" />
+          <xs:element name="identityNum" nillable="true" type="xs:string" />
+          <xs:element name="identityTypeID" type="xs:int" />
+          <xs:element name="isActiveRecord" nillable="true" type="xs:boolean" />
+          <xs:element name="isMainIdentifier" nillable="true" type="xs:boolean" />
+          <xs:element name="lastName" nillable="true" type="xs:string" />
+          <xs:element name="middleName" nillable="true" type="xs:string" />
+          <xs:element name="nationalityID" type="xs:int" />
+          <xs:element name="person" nillable="true" type="tns:Person" />
+          <xs:element name="request" nillable="true" type="tns:Request" />
+          <xs:element name="updateDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="updateUserID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PersonDoc" nillable="true" type="tns:PersonDoc" />
+  <xs:complexType name="Request">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" base="q3:ObjectValidationBase">
+        <xs:sequence>
+          <xs:element name="birthDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="createDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="createUserID" type="xs:int" />
+          <xs:element name="docCode" nillable="true" type="xs:string" />
+          <xs:element name="docExpirationDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="docNationalityID" nillable="true" type="xs:string" />
+          <xs:element name="firstName" nillable="true" type="xs:string" />
+          <xs:element name="genderID" nillable="true" type="xs:int" />
+          <xs:element name="iD" type="xs:int" />
+          <xs:element name="idenCountryID" nillable="true" type="xs:int" />
+          <xs:element name="idenNum" nillable="true" type="xs:string" />
+          <xs:element name="idenTypeID" type="xs:int" />
+          <xs:element name="isMatch1ToManyRes" nillable="true" type="xs:boolean" />
+          <xs:element name="isMatch1ToOneRes" nillable="true" type="xs:boolean" />
+          <xs:element name="isMatchTextDataRes" nillable="true" type="xs:boolean" />
+          <xs:element name="lastName" nillable="true" type="xs:string" />
+          <xs:element name="middleName" nillable="true" type="xs:string" />
+          <xs:element name="num" nillable="true" type="xs:string" />
+          <xs:element name="person" nillable="true" type="tns:Person" />
+          <xs:element name="priorityID" type="xs:int" />
+          <xs:element name="remarks" nillable="true" type="xs:string" />
+          <xs:element name="requestReason" nillable="true" type="tns:RequestReason" />
+          <xs:element name="requestStatus" nillable="true" type="tns:RequestStatus" />
+          <xs:element name="requestSubType" nillable="true" type="tns:RequestType" />
+          <xs:element name="requestType" nillable="true" type="tns:RequestType" />
+          <xs:element name="siteID" type="xs:int" />
+          <xs:element name="statusDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="updateDate" nillable="true" type="xs:dateTime" />
+          <xs:element name="updateUserID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Request" nillable="true" type="tns:Request" />
+  <xs:complexType name="RequestReason">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" base="q4:ObjectValidationBase">
+        <xs:sequence>
+          <xs:element name="code" nillable="true" type="xs:string" />
+          <xs:element name="description" nillable="true" type="xs:string" />
+          <xs:element name="iD" type="xs:int" />
+          <xs:element name="isActiveRecord" nillable="true" type="xs:boolean" />
+          <xs:element name="name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RequestReason" nillable="true" type="tns:RequestReason" />
+  <xs:complexType name="RequestStatus">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" base="q5:MultiLanguage">
+        <xs:sequence>
+          <xs:element name="activeRecordFlag" nillable="true" type="xs:boolean" />
+          <xs:element name="code" nillable="true" type="xs:string" />
+          <xs:element name="iD" type="xs:int" />
+          <xs:element name="inProcessFlag" nillable="true" type="xs:boolean" />
+          <xs:element name="internalRemarks" nillable="true" type="xs:string" />
+          <xs:element name="name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RequestStatus" nillable="true" type="tns:RequestStatus" />
+  <xs:complexType name="RequestType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Pangea.BaseStructures" base="q6:MultiLanguage">
+        <xs:sequence>
+          <xs:element name="activeRecordFlag" nillable="true" type="xs:boolean" />
+          <xs:element name="code" nillable="true" type="xs:string" />
+          <xs:element name="iD" type="xs:int" />
+          <xs:element name="name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RequestType" nillable="true" type="tns:RequestType" />
+</xs:schema>

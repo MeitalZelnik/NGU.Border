@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<codegen>
+  <generate renderer="NHibernate.Tool.hbm2net.VelocityRenderer" package="">
+    <param name="template">Hbm2Net.vm</param>
+  </generate>
+</codegen>

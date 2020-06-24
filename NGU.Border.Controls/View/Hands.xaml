@@ -1,0 +1,257 @@
+﻿<UserControl x:Class="NGU.Border.Controls.View.Hands"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:conv="clr-namespace:Pangea.WPF.Converters;assembly=Pangea.WPF.Converters"
+             xmlns:local="clr-namespace:NGU.Border.Controls"
+             mc:Ignorable="d" 
+             Name="HandsControl"
+             d:DesignHeight="300" Width="422.609">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <conv:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+            <Style x:Key="FingerButtonStyle" TargetType="{x:Type Button}">
+                <!--<Setter Property="ToolTip" Value="{Binding Position, Converter={StaticResource fingerPositionToStringNameConv}}"/>-->
+                <Setter Property="ToolTipService.ShowOnDisabled" Value="True"/>
+                <!--<Setter Property="CommandParameter" Value="{Binding}"/>-->
+                <Setter Property="Control.Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Border x:Name="border1">
+                                <Grid>
+                                    <Path x:Name="pth"
+                                          Margin="2"
+                                          Opacity="0.7" 
+                                          Fill="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}, Path=Background}"
+                                          Stretch="Fill"
+                                          HorizontalAlignment="Center" 
+                                          VerticalAlignment="Center"
+                                          Data="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Content.Data}">
+                                        <!--<Path.Data>
+                                            <PathGeometry Figures="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Content.Data}"
+                                                          FillRule="EvenOdd"/>
+                                        </Path.Data>
+                                        .IsWaivedUI-->
+                                    </Path>
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <DataTrigger Value="Capture" Binding="{Binding }">
+                                    <Setter Property="Background" Value="Blue"/>
+                                </DataTrigger>
+
+                                <DataTrigger Value="Waive" Binding="{Binding }">
+                                    <Setter Property="Background" Value="Orange"/>
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                </DataTrigger>
+
+                                <DataTrigger Value="Verified" Binding="{Binding }">
+                                    <Setter Property="Background" Value="Green"/>
+                                </DataTrigger>
+
+                                <DataTrigger Value="NotVerified" Binding="{Binding }">
+                                    <Setter Property="Background" Value="Red"/>
+                                </DataTrigger>
+
+                                <DataTrigger Value="NotCapture" Binding="{Binding }">
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                    <Setter Property="Background" Value="Gray"/>
+                                    <Setter Property="Opacity" Value="0.4"/>
+                                </DataTrigger>
+
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Opacity" Value="0.5"/>
+                                </Trigger>
+                                <!--<DataTrigger  Value="true">
+                                    <DataTrigger.Binding>
+                                        <MultiBinding Converter="{StaticResource AndConverter}">
+                                            <Binding Path="IsScanned" />
+                                            <Binding Path="IsNegativeVerification" />
+                                        </MultiBinding>
+                                    </DataTrigger.Binding>
+                                    <Setter Property="Background" Value="Red"/>
+                                </DataTrigger>
+
+                                <DataTrigger Binding="{Binding IsScanned}" Value="false">
+                                    <Setter Property="Background" Value="Gray"/>
+                                </DataTrigger>-->
+
+                                <DataTrigger Binding="{Binding}" Value="{x:Null}">
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                    <Setter Property="Background" Value="Gray"/>
+                                    <!--<Setter Property="Opacity" Value="0.7"/>-->
+                                </DataTrigger>
+
+                                <!--<DataTrigger Binding="{Binding Path=DoesNotExist}" Value="false">
+                                    <Setter Property="IsEnabled" Value="True"/>
+                                </DataTrigger>-->
+                                <!--<DataTrigger Binding="{Binding Path=DoesNotExist}" Value="True">
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                    <Setter Property="Background" Value="Gray"/>
+                                    <Setter Property="Opacity" Value="0.5"/>
+                                </DataTrigger>-->
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Border Background="White" 
+            BorderBrush="Black" 
+            BorderThickness="0" 
+            CornerRadius="10" 
+            Margin="5"
+            x:Name="FingerprintWaivedBorder">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--<Label Grid.Column="0"
+                   Grid.Row="0"
+                   Content="{Binding LeftHandTitle}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>-->
+
+            <!-- Left Hand -->
+            <Grid Grid.Column="0"
+                  Grid.Row="1"
+                  Margin="5">
+
+                <Path x:Name="LeftHand"
+                  Stroke="Black" 
+                  StrokeThickness="4"
+                  Stretch="Fill"
+                  Data="M 174.74597,510.46427 C 161.46533,508.65389 151.11571,506.29047 141,502.7581 94.485865,486.51554 65.538893,451.02994 56.351746,398.98924 54.606751,389.10469 54.5,380.22738 54.5,245 V 101.5 l 2.363271,-5.22705 C 61.669328,85.642982 72.274702,78.823529 84,78.823529 c 11.667552,0 21.06264,5.838228 26.8364,16.676471 l 2.6636,5 0.5,70.33897 0.5,70.33897 2.37645,1.92372 c 1.30705,1.05804 3.45328,2.19398 4.76941,2.5243 3.08543,0.7744 8.09154,-1.30913 9.64236,-4.01311 C 132.20535,240.01374 132.62158,215.4281 133,140.5 l 0.5,-99 2.39163,-4.8583 c 7.00641,-14.232621 24.45118,-21.007121 38.30929,-14.877021 6.50375,2.876919 13.14854,9.343438 15.93581,15.508271 L 192.5,42.5 l 0.5,89.33702 0.5,89.33702 2.80576,2.41298 c 2.97249,2.55636 7.47514,3.13579 10.74963,1.38334 C 212.14872,222.24449 212,225.36896 212,121.08717 212,26.575262 212.0515,23.937479 213.9968,18.738086 216.24375,12.7326 222.37747,5.930534 228.5,2.654594 c 3.2332,-1.72996452 5.7253,-2.14162659 13,-2.14742295 8.10585,-0.006459 9.5298,0.2863032 14.33272,2.94677935 6.28718,3.4826571 9.62039,7.1611916 12.84575,14.1766156 l 2.35879,5.130566 -0.0175,96.369438 c -0.0116,64.03429 0.33328,97.62714 1.02793,100.11783 2.10568,7.54992 13.35951,9.14863 16.83205,2.39114 0.76505,-1.48876 1.17867,-26.01658 1.35986,-80.63954 l 0.2604,-78.5 2.29935,-5 c 2.90774,-6.322954 8.28935,-11.928081 14.70065,-15.311203 4.11291,-2.170304 6.33064,-2.639207 12.5,-2.642915 12.01063,-0.0072 21.35751,5.522677 26.81422,15.864098 L 349.5,60.5 l 0.5,126.62575 0.5,126.62575 22,-30.09115 c 23.40723,-32.01592 26.81372,-35.63478 37.5,-39.8378 8.44145,-3.3201 19.67726,-3.11051 27.5,0.51299 7.63158,3.53496 14.66418,10.90425 17.63205,18.4762 3.05112,7.78436 3.06959,20.46865 0.0406,27.91637 -3.17787,7.81387 -99.10018,152.70866 -108.62407,164.08133 -26.63695,31.80774 -63.11678,50.06441 -111.29887,55.70058 -15.55793,1.8199 -46.99203,1.79614 -60.50378,-0.0457 z"/>
+
+                <Button x:Name="borderLeftLittleFinger"
+                    DataContext="{Binding MapFingers[LeftLittle]}"
+                    Style="{DynamicResource FingerButtonStyle}"
+                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.SelectFingerCommand}" CommandParameter="LeftLittle">
+                    <Path x:Name="LeftLittleFinger"
+                          Data="m 195.25,511.2545 c 5.3625,-0.17981 14.1375,-0.17981 19.5,0 5.3625,0.17981 0.975,0.32692 -9.75,0.32692 -10.725,0 -15.1125,-0.14711 -9.75,-0.32692 z M 54,353 c 0,-13.33333 0.365079,-21 1,-21 0.634921,0 1,7.66667 1,21 0,13.33333 -0.365079,21 -1,21 -0.634921,0 -1,-7.66667 -1,-21 z m 402.19936,-76.5 c 0,-5.921 0.27391,-8.14472 0.80064,-6.5 0.44035,1.375 0.80064,4.3 0.80064,6.5 0,2.2 -0.36029,5.125 -0.80064,6.5 -0.52673,1.64472 -0.80064,-0.579 -0.80064,-6.5 z M 54.789345,163.75 C 54.53735,102.4425 54.522702,102.81951 57.402125,96.5 60.531822,89.631207 63.899038,85.926115 70.167281,82.45395 74.900733,79.831951 76.455191,79.5 84,79.5 c 7.553882,0 9.096478,0.330379 13.858802,2.968146 6.424258,3.558282 11.392678,9.097732 13.811118,15.398443 1.61349,4.203621 1.80836,9.851081 2.10075,60.883411 L 114.09296,215 H 84.54648 55 Z M 237.7277,0.27826796 c 1.77523,-0.22091184 4.92523,-0.22454156 7,-0.008066 2.07476,0.21647552 0.6223,0.39722157 -3.2277,0.40165789 -3.85,0.004436 -5.54754,-0.17268001 -3.7723,-0.39359189 z"/>
+                </Button>
+
+                <Button x:Name="btnLeftRingFinger"
+                    DataContext="{Binding MapFingers[LeftRing]}"
+                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.SelectFingerCommand}" CommandParameter="LeftRing"
+                    Style="{DynamicResource FingerButtonStyle}">
+                    <Path x:Name="LeftRingFinger"
+                  Data="m 195.25,511.2545 c 5.3625,-0.17981 14.1375,-0.17981 19.5,0 5.3625,0.17981 0.975,0.32692 -9.75,0.32692 -10.725,0 -15.1125,-0.14711 -9.75,-0.32692 z M 54,353 c 0,-13.33333 0.365079,-21 1,-21 0.634921,0 1,7.66667 1,21 0,13.33333 -0.365079,21 -1,21 -0.634921,0 -1,-7.66667 -1,-21 z m 402.19936,-76.5 c 0,-5.921 0.27391,-8.14472 0.80064,-6.5 0.44035,1.375 0.80064,4.3 0.80064,6.5 0,2.2 -0.36029,5.125 -0.80064,6.5 -0.52673,1.64472 -0.80064,-0.579 -0.80064,-6.5 z M 133.22163,123.25 133.5,42.5 l 2.80615,-5.714439 c 5.59338,-11.390347 16.06498,-17.458441 28.57762,-16.560193 11.18216,0.802737 19.10593,6.064044 24.0582,15.97442 L 192,42.319445 V 123.15972 204 H 162.47163 132.94327 Z M 237.7277,0.27826796 c 1.77523,-0.22091184 4.92523,-0.22454156 7,-0.008066 2.07476,0.21647552 0.6223,0.39722157 -3.2277,0.40165789 -3.85,0.004436 -5.54754,-0.17268001 -3.7723,-0.39359189 z"/>
+                </Button>
+
+                <Button x:Name="btnLeftMiddleFinger"
+                    DataContext="{Binding MapFingers[LeftMiddle]}"
+                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.SelectFingerCommand}" CommandParameter="LeftMiddle"
+                    Style="{DynamicResource FingerButtonStyle}">
+                    <Path x:Name="LeftMiddleFinger"
+                  Data="m 195.25,511.2545 c 5.3625,-0.17981 14.1375,-0.17981 19.5,0 5.3625,0.17981 0.975,0.32692 -9.75,0.32692 -10.725,0 -15.1125,-0.14711 -9.75,-0.32692 z M 54,353 c 0,-13.33333 0.365079,-21 1,-21 0.634921,0 1,7.66667 1,21 0,13.33333 -0.365079,21 -1,21 -0.634921,0 -1,-7.66667 -1,-21 z m 402.19936,-76.5 c 0,-5.921 0.27391,-8.14472 0.80064,-6.5 0.44035,1.375 0.80064,4.3 0.80064,6.5 0,2.2 -0.36029,5.125 -0.80064,6.5 -0.52673,1.64472 -0.80064,-0.579 -0.80064,-6.5 z M 212.22761,105.25 c 0.26906,-81.736896 0.29817,-82.805715 2.37805,-87.300805 C 219.58069,7.1970174 230.32964,-6.4634647e-4 241.40972,7.8889503e-4 253.55672,0.00236234 266.18115,9.136186 269.50463,20.327554 270.77825,24.616283 271,37.421931 271,106.6815 V 188 h -29.52239 -29.52238 z"/>
+                </Button>
+
+                <Button x:Name="btnLeftIndexFinger"
+                    DataContext="{Binding MapFingers[LeftIndex]}"
+                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.SelectFingerCommand}" CommandParameter="LeftIndex"
+                    Style="{DynamicResource FingerButtonStyle}">
+                    <Path x:Name="LeftIndexFingerr"
+                  Data="m 195.25,511.2545 c 5.3625,-0.17981 14.1375,-0.17981 19.5,0 5.3625,0.17981 0.975,0.32692 -9.75,0.32692 -10.725,0 -15.1125,-0.14711 -9.75,-0.32692 z M 54,353 c 0,-13.33333 0.365079,-21 1,-21 0.634921,0 1,7.66667 1,21 0,13.33333 -0.365079,21 -1,21 -0.634921,0 -1,-7.66667 -1,-21 z m 402.19936,-76.5 c 0,-5.921 0.27391,-8.14472 0.80064,-6.5 0.44035,1.375 0.80064,4.3 0.80064,6.5 0,2.2 -0.36029,5.125 -0.80064,6.5 -0.52673,1.64472 -0.80064,-0.579 -0.80064,-6.5 z M 291.22556,135.75 291.5,60.5 l 2.96815,-5.358802 c 5.61891,-10.144588 15.0015,-15.515846 26.90741,-15.403699 12.62595,0.118929 24.9248,10.110129 27.55772,22.387022 C 349.63293,65.386877 350,91.857268 350,139.04922 V 211 H 320.47556 290.95113 Z M 237.7277,0.27826796 c 1.77523,-0.22091184 4.92523,-0.22454156 7,-0.008066 2.07476,0.21647552 0.6223,0.39722157 -3.2277,0.40165789 -3.85,0.004436 -5.54754,-0.17268001 -3.7723,-0.39359189 z"/>
+                </Button>
+
+                <Button x:Name="btnLeftThumbFinger"
+                    DataContext="{Binding MapFingers[LeftThumb]}"
+                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.SelectFingerCommand}" CommandParameter="LeftThumb"
+                    Style="{DynamicResource FingerButtonStyle}" >
+                    <Path x:Name="LeftThumbFinger"
+                  Data="m 197.79748,511.25525 c 4.56362,-0.18572 11.76362,-0.18468 16,0.002 4.23639,0.18698 0.50252,0.33893 -8.29748,0.33766 -8.8,-0.001 -12.26613,-0.15425 -7.70252,-0.33996 z M 377.02048,344.22941 377,277.95882 l 8.32669,-11.22941 c 9.69806,-13.07884 14.78971,-17.95398 22.5533,-21.59424 4.9053,-2.30005 6.89174,-2.6338 15.62001,-2.62441 8.86111,0.01 10.5717,0.31137 15.0198,2.6502 11.62251,6.11117 18.4802,17.68712 18.4802,31.19505 0,13.91128 2.99764,8.69225 -57.8067,100.64399 l -22.15234,33.5 -0.0205,-66.27059 z M 55.424763,353 c 0,-11.825 0.144653,-16.6625 0.32145,-10.75 0.176798,5.9125 0.176798,15.5875 0,21.5 -0.176797,5.9125 -0.32145,1.075 -0.32145,-10.75 z M 239.25,0.28374556 c 1.5125,-0.22912464 3.9875,-0.22912464 5.5,0 1.5125,0.22912464 0.275,0.41659026 -2.75,0.41659026 -3.025,0 -4.2625,-0.18746562 -2.75,-0.41659026 z"/>
+                </Button>
+
+            </Grid>
+
+            <TextBlock Text="Select Finger" 
+                       Grid.Row="1"
+                       HorizontalAlignment="Center" 
+                       TextAlignment="Center"
+                       Grid.Column="0"
+                       Visibility="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}, 
+                                            Path=IsEnabled, 
+                                            Converter={StaticResource BoolToVisibilityConverter}}"
+                       Grid.ColumnSpan="3"
+                       Panel.ZIndex="1000"
+                       Margin="0,0,0,150"
+                       VerticalAlignment="Center"
+                       Style="{StaticResource HeaderTextblock}"  Width="113" />
+
+            <!--<Label Grid.Column="2"
+                   Grid.Row="0"
+                   Content="{Binding RightHandTitle}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>-->
+
+            <!--Right Hand-->
+            <Grid Grid.Column="2"
+                  Grid.Row="1"
+                  Margin="5" >
+
+                <Path x:Name="RightHand"
+                      Stroke="Black" 
+                      StrokeThickness="4"
+                      Stretch="Fill"
+                      Data="M 287,511.30063 C 251.28602,508.52321 221.15747,498.89745 196.11713,482.26449 185.94919,475.51046 169.954,460.36778 161.50806,449.5 153.41078,439.08086 60.296527,297.87334 57.65031,292 c -3.187151,-7.07396 -3.476243,-20.81118 -0.598701,-28.44942 2.713375,-7.20248 9.411281,-14.69989 16.428587,-18.38962 4.448101,-2.33883 6.158699,-2.64066 15.019804,-2.6502 8.751873,-0.009 10.70833,0.32129 15.67515,2.64965 3.12133,1.46322 7.77291,4.59406 10.33684,6.95741 2.56393,2.36335 14.18512,17.32565 25.82485,33.24956 L 161.5,314.31994 162,187.90997 c 0.55177,-139.498755 -0.004,-128.29211 6.81986,-137.567374 4.29145,-5.833288 13.98201,-10.531413 21.87592,-10.605769 11.83321,-0.111462 21.2296,5.282228 26.83607,15.404371 L 220.5,60.5 l 0.5,80.33709 0.5,80.33709 2.80576,2.41291 c 3.80561,3.27276 9.58302,3.27269 13.38848,-1.6e-4 L 240.5,221.17387 241,121.33693 c 0.55709,-111.236289 -0.012,-102.890383 7.58937,-111.304177 2.08105,-2.3034661 6.06227,-5.3849987 8.84717,-6.8478504 6.81827,-3.58149439 18.80383,-3.75998374 25.28566,-0.3765547 6.56123,3.424878 10.94659,7.8172361 13.98771,14.0100491 L 299.5,22.5 l 0.5,99.3369 0.5,99.3369 2.80576,2.4131 c 3.03949,2.61412 8.33656,3.21007 11.84464,1.33261 C 320.04066,222.30232 320,223.10067 320,129.69184 V 42.319445 l 3.05803,-6.119657 c 4.95227,-9.910376 12.87604,-15.171683 24.0582,-15.97442 12.51264,-0.898248 22.98424,5.169846 28.57762,16.560193 L 378.5,42.5 l 0.5,99.33694 0.5,99.33695 2.80576,2.41305 c 3.70971,3.19049 8.67846,3.19063 12.38848,3.8e-4 l 2.80576,-2.41269 0.52354,-69.33731 c 0.47812,-63.32189 0.67803,-69.7393 2.30428,-73.970731 C 402.75,91.564152 407.71843,86.025605 414.1412,82.468146 418.90352,79.830379 420.44612,79.5 428,79.5 c 7.54481,0 9.09927,0.331951 13.83272,2.95395 6.29748,3.48836 9.62045,7.16127 12.86603,14.220931 l 2.37908,5.174879 -0.0574,142.63542 c -0.0376,93.5466 -0.41798,145.28188 -1.10517,150.32512 -8.23505,60.43663 -46.25847,101.2222 -105.4153,113.07302 -17.51069,3.50789 -44.00267,4.93358 -63.5,3.41731 z"/>
+
+                <Button x:Name="btnRightThumbFinger"
+                    DataContext="{Binding MapFingers[RightThumb]}"
+                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.SelectFingerCommand}" CommandParameter="RightThumb"
+                    Style="{DynamicResource FingerButtonStyle}">
+                    <Path x:Name="RightThumbFinger"
+                          Data="m 297.25,511.2545 c 5.3625,-0.17981 14.1375,-0.17981 19.5,0 5.3625,0.17981 0.975,0.32692 -9.75,0.32692 -10.725,0 -15.1125,-0.14711 -9.75,-0.32692 z M 97.061098,353.20421 C 76.469702,322.0169 58.492434,293.8 57.111613,290.5 c -3.628779,-8.67236 -3.528045,-19.68088 0.256213,-28 3.279788,-7.21011 9.337932,-13.71561 16.132174,-17.32342 4.444277,-2.35996 6.111445,-2.65625 15,-2.66582 8.728274,-0.009 10.714712,0.32436 15.62001,2.62441 7.76481,3.64084 12.85535,8.51554 22.56044,21.60389 l 8.33383,11.23906 -0.25714,65.96515 L 134.5,409.90842 Z M 456,353 c 0,-13.33333 0.36508,-21 1,-21 0.63492,0 1,7.66667 1,21 0,13.33333 -0.36508,21 -1,21 -0.63492,0 -1,-7.66667 -1,-21 z M 266.7277,0.27826796 c 1.77523,-0.22091184 4.92523,-0.22454156 7,-0.008066 2.07476,0.21647552 0.6223,0.39722157 -3.2277,0.40165789 -3.85,0.004436 -5.54754,-0.17268001 -3.7723,-0.39359189 z"/>
+                </Button>
+
+                <Button x:Name="btnRightIndexFinger"
+                    DataContext="{Binding MapFingers[RightIndex]}"
+                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.SelectFingerCommand}" CommandParameter="RightIndex"
+                        
+                    Style="{DynamicResource FingerButtonStyle}">
+                    <Path x:Name="RightIndexFinger"
+                      Data="m 297.25,511.2545 c 5.3625,-0.17981 14.1375,-0.17981 19.5,0 5.3625,0.17981 0.975,0.32692 -9.75,0.32692 -10.725,0 -15.1125,-0.14711 -9.75,-0.32692 z M 456,353 c 0,-13.33333 0.36508,-21 1,-21 0.63492,0 1,7.66667 1,21 0,13.33333 -0.36508,21 -1,21 -0.63492,0 -1,-7.66667 -1,-21 z M 54.435872,280.42093 c -0.377671,-2.51849 -0.234285,-6.45599 0.318636,-8.75 0.929202,-3.85517 1.014401,-3.5085 1.125401,4.57907 0.06605,4.8125 -0.07734,8.75 -0.318636,8.75 -0.2413,0 -0.747731,-2.06058 -1.125401,-4.57907 z M 162,139.04922 c 0,-47.191952 0.36707,-73.662343 1.06672,-76.924699 2.63292,-12.276893 14.93177,-22.268093 27.55772,-22.387022 11.90591,-0.112147 21.2885,5.259111 26.90741,15.403699 L 220.5,60.5 l 0.27444,75.25 0.27443,75.25 H 191.52444 162 Z M 266.7277,0.27826796 c 1.77523,-0.22091184 4.92523,-0.22454156 7,-0.008066 2.07476,0.21647552 0.6223,0.39722157 -3.2277,0.40165789 -3.85,0.004436 -5.54754,-0.17268001 -3.7723,-0.39359189 z"/>
+                </Button>
+
+                <Button x:Name="btnRightMiddleFinger"
+                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.SelectFingerCommand}" CommandParameter="RightMiddle"
+                        
+                    DataContext="{Binding MapFingers[RightMiddle]}"
+                    Style="{DynamicResource FingerButtonStyle}">
+                    <Path x:Name="RightMiddleFinger"
+                      Data="m 297.25,511.2545 c 5.3625,-0.17981 14.1375,-0.17981 19.5,0 5.3625,0.17981 0.975,0.32692 -9.75,0.32692 -10.725,0 -15.1125,-0.14711 -9.75,-0.32692 z M 456,353 c 0,-13.33333 0.36508,-21 1,-21 0.63492,0 1,7.66667 1,21 0,13.33333 -0.36508,21 -1,21 -0.63492,0 -1,-7.66667 -1,-21 z M 54.435872,280.42093 c -0.377671,-2.51849 -0.234285,-6.45599 0.318636,-8.75 0.929202,-3.85517 1.014401,-3.5085 1.125401,4.57907 0.06605,4.8125 -0.07734,8.75 -0.318636,8.75 -0.2413,0 -0.747731,-2.06058 -1.125401,-4.57907 z M 241,106.6815 c 0,-91.332011 -0.27351,-87.681016 7.205,-96.17705 14.57932,-16.5629836 39.8507,-12.7381918 49.18934,7.444745 2.07988,4.49509 2.10899,5.563909 2.37805,87.300805 L 300.04477,188 H 270.52239 241 Z"/>
+                </Button>
+
+                <Button x:Name="btnRightRingFinger"
+                    DataContext="{Binding MapFingers[RightRing]}"
+                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.SelectFingerCommand}" CommandParameter="RightRing"
+                        
+                    Style="{DynamicResource FingerButtonStyle}">
+                    <Path x:Name="RightRingFinger"
+                      Data="m 297.25,511.2545 c 5.3625,-0.17981 14.1375,-0.17981 19.5,0 5.3625,0.17981 0.975,0.32692 -9.75,0.32692 -10.725,0 -15.1125,-0.14711 -9.75,-0.32692 z M 456,353 c 0,-13.33333 0.36508,-21 1,-21 0.63492,0 1,7.66667 1,21 0,13.33333 -0.36508,21 -1,21 -0.63492,0 -1,-7.66667 -1,-21 z M 54.435872,280.42093 c -0.377671,-2.51849 -0.234285,-6.45599 0.318636,-8.75 0.929202,-3.85517 1.014401,-3.5085 1.125401,4.57907 0.06605,4.8125 -0.07734,8.75 -0.318636,8.75 -0.2413,0 -0.747731,-2.06058 -1.125401,-4.57907 z M 320,123.15972 V 42.319445 l 3.05803,-6.119657 c 4.95227,-9.910376 12.87604,-15.171683 24.0582,-15.97442 12.51264,-0.898248 22.98424,5.169846 28.57762,16.560193 L 378.5,42.5 l 0.27837,80.75 0.27836,80.75 H 349.52837 320 Z M 266.7277,0.27826796 c 1.77523,-0.22091184 4.92523,-0.22454156 7,-0.008066 2.07476,0.21647552 0.6223,0.39722157 -3.2277,0.40165789 -3.85,0.004436 -5.54754,-0.17268001 -3.7723,-0.39359189 z"/>
+                </Button>
+
+                <Button x:Name="btnRightLittleFinger"
+                        DataContext="{Binding MapFingers[RightLittle]}"
+                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=DataContext.SelectFingerCommand}" CommandParameter="RightLittle"
+                        
+                        Style="{DynamicResource FingerButtonStyle}">
+                    <Path x:Name="RightLittleFinger"
+                          Data="m 297.25,511.2545 c 5.3625,-0.17981 14.1375,-0.17981 19.5,0 5.3625,0.17981 0.975,0.32692 -9.75,0.32692 -10.725,0 -15.1125,-0.14711 -9.75,-0.32692 z M 456,353 c 0,-13.33333 0.36508,-21 1,-21 0.63492,0 1,7.66667 1,21 0,13.33333 -0.36508,21 -1,21 -0.63492,0 -1,-7.66667 -1,-21 z M 54.435872,280.42093 c -0.377671,-2.51849 -0.234285,-6.45599 0.318636,-8.75 0.929202,-3.85517 1.014401,-3.5085 1.125401,4.57907 0.06605,4.8125 -0.07734,8.75 -0.318636,8.75 -0.2413,0 -0.747731,-2.06058 -1.125401,-4.57907 z M 398.22933,158.75 c 0.29239,-51.03233 0.48726,-56.67979 2.10075,-60.883411 2.41844,-6.300711 7.38686,-11.840161 13.81112,-15.398443 C 418.90352,79.830379 420.44612,79.5 428,79.5 c 7.54481,0 9.09927,0.331951 13.83272,2.95395 6.26824,3.472165 9.63546,7.177257 12.76515,14.04605 2.87943,6.31951 2.86478,5.9425 2.61279,67.25 L 457,215 H 427.45352 397.90704 Z M 266.7277,0.27826796 c 1.77523,-0.22091184 4.92523,-0.22454156 7,-0.008066 2.07476,0.21647552 0.6223,0.39722157 -3.2277,0.40165789 -3.85,0.004436 -5.54754,-0.17268001 -3.7723,-0.39359189 z"/>
+                </Button>
+
+            </Grid>
+
+        </Grid>
+    </Border>
+</UserControl>
