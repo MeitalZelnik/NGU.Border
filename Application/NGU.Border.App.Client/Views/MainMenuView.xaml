@@ -115,8 +115,10 @@
 
                         <!--<telerik:RadCarouselPanel ItemsPerPage="7" UseLayoutRounding="True"/>-->
 
-                        <UniformGrid Columns="{Binding AmountColumns, Mode=OneWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                    </ItemsPanelTemplate>
+                        <!--<UniformGrid Columns="{Binding AmountColumns, Mode=OneWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />-->
+						<UniformGrid Columns="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+
+					</ItemsPanelTemplate>
                 </ListBox.ItemsPanel>
             </ListBox>
         </ScrollViewer>
