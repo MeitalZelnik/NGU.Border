@@ -11,14 +11,14 @@
         d:DesignWidth="685.912" d:DesignHeight="364.85">
     <UserControl.Resources>
         <convc:BoolToVisibilityConverter x:Key="BoolToVisibility" />
-        <Style x:Key="myoperationbuttonstyle" TargetType="{x:Type telerik:RadButton}" BasedOn="{StaticResource ButtonBigStyle}">
+        <!--<Style x:Key="myoperationbuttonstyle" TargetType="{x:Type telerik:RadButton}" BasedOn="{StaticResource ButtonBigStyle}">
             <Setter Property="Opacity" Value="0.8"/>
             <Style.Triggers>
                 <Trigger Property="IsEnabled" Value="False">
                     <Setter Property="Opacity" Value="0.3"/>
                 </Trigger>
             </Style.Triggers>
-        </Style>
+        </Style>-->
     </UserControl.Resources>
     <Grid>
         <Image Source="{StaticResource BorderControlWatermarkBackgroundImage}" Opacity="0.3"
@@ -96,6 +96,7 @@
                             <TextBlock TextWrapping="Wrap" Text="{Binding NotificationText}" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16" Margin="12,0,0,0" Padding="0,9,3,11" />
                         </Border>
                         <!-- Buttons -->
+						
                         <ItemsControl Grid.Column="1" ItemsSource="{Binding Buttons}" Focusable="False" Margin="0,0,0,-30" Padding="0,10,0,0" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Right">
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
@@ -109,22 +110,15 @@
                             </ItemsControl.ItemContainerStyle>
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
-                                    <telerik:RadButton
-				                           MinHeight="40"
-                                           MinWidth="120"
-                                           Background="{Binding Background}"
-                                           VerticalContentAlignment="Center"
-				                           HorizontalContentAlignment="Center"
+                                    <Button
+                                           
 				                           Command="{Binding OperationCommand}"
 				                           CommandParameter="{Binding OperationParameter}"
 				                           Content="{Binding Text}"
                                            IsEnabled="{Binding IsEnabled}"
-                                           Padding="10,5"
-                                           Margin="0,0,0,30"
-                                           Style="{StaticResource myoperationbuttonstyle}"
-                                           Width="Auto"
-                                           FontFamily="Ariel"
-                                           Foreground="White"/>
+                                           Style="{StaticResource ButtonBigStyle}"
+                                           
+                                           />
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>

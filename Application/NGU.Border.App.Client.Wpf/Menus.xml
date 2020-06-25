@@ -3,12 +3,12 @@
 
 	<AppMenu id="1000" name="theapp">
 
-		<!--4
+	  <!--4
 	  41
 	  42-->
 
 		<Menu id="41" order="1" name="Enrol">
-			<Module is_process="true" showSideMenu="false" type="wstype"/>
+			<Module is_process="true" showSideMenu="true" type="wstype"/>
 			<Invocation>
 				<assembly>NGU.App</assembly>
 				<vm></vm>
@@ -44,7 +44,7 @@
 			</Invocation>
 			<Image>MenuIssuanceMainMenuImage</Image>
 			<Menus>
-				<Menu id="421" order="1" name="Registration">
+				<Menu id="411" order="1" name="Registration">
 					<Invocation>
 						<assembly>NGU.Border.App.Client</assembly>
 						<vm>NGU.App.Client.ViewModels.RegistrationViewModel</vm>
@@ -53,7 +53,7 @@
 					<DetailsBox>false</DetailsBox>
 				</Menu>
 
-				<Menu id="422" order="2" name="Registration">
+				<Menu id="412" order="2" name="Registration">
 					<Invocation>
 						<assembly>NGU.Border.App.Client</assembly>
 						<vm>NGU.App.Client.ViewModels.RegistrationViewModel</vm>
@@ -63,7 +63,6 @@
 				</Menu>
 			</Menus>
 		</Menu>
-
 
 	</AppMenu>
 
