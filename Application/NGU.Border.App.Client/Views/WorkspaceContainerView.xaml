@@ -21,7 +21,7 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <Image Source="{StaticResource BlackListWatermarkBackgroundImage}" Opacity="0.3"
+        <Image Source="{StaticResource BorderControlWatermarkBackgroundImage}" Opacity="0.3"
                Stretch="Fill"
                Grid.Row="0" />
 

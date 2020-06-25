@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NGU.App.Client.Wpf"
         mc:Ignorable="d"
-        Icon="{StaticResource SystemGeneralBlackListIcon}"
+        Icon="{StaticResource SystemGeneralBorderControlIcon}"
         WindowStyle="None"
         WindowState="Maximized"
         ResizeMode="NoResize"> 

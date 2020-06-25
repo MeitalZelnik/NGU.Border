@@ -1,55 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <RootMenu>
 
-  <AppMenu id="1000" name="theapp">
+	<AppMenu id="1000" name="theapp">
 
-    <Menu id="1" order="1" name="Enrol">
-      <Module is_process="true" showSideMenu="false" type="wstype"/>
-      <Invocation>
-        <assembly>NGU.App</assembly>
-        <vm></vm>
-      </Invocation>
-      <Image>MenuIssuanceMainMenuImage</Image>
-      <Menus>
-        <Menu id="10" order="1" name="Registration">
-          <Invocation>
-            <assembly>NGU.Border.App.Client</assembly>
-            <vm>NGU.App.Client.ViewModels.RegistrationViewModel</vm>
-          </Invocation>
-          <Image>EnquiryMenuApplicationsImage</Image>
-          <DetailsBox>false</DetailsBox>
-        </Menu>
-        <!--<Menu id="11" order="1" name="BiometricData">
-          <Invocation>
-            <assembly>NGU.Border.App.Client</assembly>
-            <vm>NGU.App.Client.ViewModels.ApplicantBioDataViewModel</vm>
-          </Invocation>
-          <Image>MenuBiometricsModuleImage</Image>
-          <DetailsBox>true</DetailsBox>
-          <Accessibility>Open</Accessibility>
-        </Menu>-->
-        <!--<Menu id="12" order="1" name="MenuCardInfo">
-          <Invocation>
-            <assembly>NGU.Border.App.Client</assembly>
-            <vm>NGU.App.Client.ViewModels.View11ViewModel</vm>
-          </Invocation>
-          <Image>ScanImg</Image>
-          <DetailsBox>false</DetailsBox>
-        </Menu>
-        <Menu id="13" order="2" name="MenuCollection">
-          <Invocation>
-            <assembly>NGU.Border.App.Client</assembly>
-            <vm>NGU.App.Client.ViewModels.View12ViewModel</vm>
-          </Invocation>
-          <Image>CropImg</Image>
-          <DetailsBox>false</DetailsBox>
-          <accessibility>SC</accessibility>
-        </Menu>-->
-      </Menus>
-    </Menu>
+		<!--4
+	  41
+	  42-->
+
+		<Menu id="41" order="1" name="Enrol">
+			<Module is_process="true" showSideMenu="false" type="wstype"/>
+			<Invocation>
+				<assembly>NGU.App</assembly>
+				<vm></vm>
+			</Invocation>
+			<Image>MenuIssuanceMainMenuImage</Image>
+			<Menus>
+				<Menu id="411" order="1" name="Registration">
+					<Invocation>
+						<assembly>NGU.Border.App.Client</assembly>
+						<vm>NGU.App.Client.ViewModels.RegistrationViewModel</vm>
+					</Invocation>
+					<Image>EnquiryMenuApplicationsImage</Image>
+					<DetailsBox>false</DetailsBox>
+				</Menu>
+
+				<Menu id="412" order="2" name="Registration">
+					<Invocation>
+						<assembly>NGU.Border.App.Client</assembly>
+						<vm>NGU.App.Client.ViewModels.RegistrationViewModel</vm>
+					</Invocation>
+					<Image>EnquiryMenuApplicationsImage</Image>
+					<DetailsBox>false</DetailsBox>
+				</Menu>
+			</Menus>
+		</Menu>
 
 
-  </AppMenu>
+		<Menu id="42" order="1" name="Enrol">
+			<Module is_process="true" showSideMenu="true" type="wstype"/>
+			<Invocation>
+				<assembly>NGU.App</assembly>
+				<vm></vm>
+			</Invocation>
+			<Image>MenuIssuanceMainMenuImage</Image>
+			<Menus>
+				<Menu id="421" order="1" name="Registration">
+					<Invocation>
+						<assembly>NGU.Border.App.Client</assembly>
+						<vm>NGU.App.Client.ViewModels.RegistrationViewModel</vm>
+					</Invocation>
+					<Image>EnquiryMenuApplicationsImage</Image>
+					<DetailsBox>false</DetailsBox>
+				</Menu>
+
+				<Menu id="422" order="2" name="Registration">
+					<Invocation>
+						<assembly>NGU.Border.App.Client</assembly>
+						<vm>NGU.App.Client.ViewModels.RegistrationViewModel</vm>
+					</Invocation>
+					<Image>EnquiryMenuApplicationsImage</Image>
+					<DetailsBox>false</DetailsBox>
+				</Menu>
+			</Menus>
+		</Menu>
+
+
+	</AppMenu>
 
 
 
